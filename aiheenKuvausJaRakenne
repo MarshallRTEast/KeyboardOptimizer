@@ -1,0 +1,24 @@
+Aihe: Näppäimistön optimoija
+
+  Ohjelma, joka lukee tekstitiedostosta kirjainmerkkien määrät ja antaa ne näkyville graafisessa liittymässä värikoodattuna,
+  esimerkiksi punainen = paljon, sininen = vähän. 
+  Ohjelman tavoitteena kyetä luomaan oma näppäimistö käyttäen apuna laskettuja kirjainten käyttöasteita siten, että
+  eniten käytetyt kirjaimet ovat lähimpänä kymmensormijärjestelmää käytettäessä.
+  
+Käyttäjät: Yksityishenkilö
+
+  Käyttäjänä voi toimia kuka tahansa, joka on kiinnostunut selvittämään minkälainen näppäimistö toimisi parhaiten milläkin
+  kielellä.
+  
+Toiminnot: 
+
+  - Tekstitiedoston lukeminen
+  - Eri kirjainten asettelu valmiiseen näppäimistöpohjaan haluamallaan tavalla
+  - Kirjainten piilotus/esiin asettaminen niihin liittyvistä värillisistä esityksistä
+    * jotta näppäimistön voi luoda tietämättä varsinaisia kirjaimia ja lopuksi verrata sitä nykyisiin näppäimistöihin
+  
+  tarvittaessa lisäominaisuuksia
+  
+  - Luotujen näppäimistöjen tallentaminen
+  - Automaattinen näppäimistön luoja -nappi
+  
