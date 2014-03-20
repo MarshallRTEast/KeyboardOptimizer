@@ -7,6 +7,9 @@ package keyboardoptimizer.keyboardoptimizer;
 import java.util.HashMap;
 import java.util.Map;
 
+// voisi muuttaa siten, että ottaa parametrikseen suoraan mapOfKeysin, ei tarvis kahta konstruktoria ku hoituis KeyboardGeneratorissa
+// jätetään myöhempään mietintään
+
 public class Keyboard {
 
     private Map<Character, Integer> mapOfKeys;
