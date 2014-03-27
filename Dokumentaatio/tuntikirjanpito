@@ -14,3 +14,9 @@ Toinen viikko
   2h:     Ensimmäisten koodinpätkien teko NetBeansissa, ensimmäinen luokka pitkällä, muut vasta alussa
   1,5h:   Testien tekoa, KeyboardGeneratorin miettimistä ja nopeasti määrittelyvaiheen luokkakaavio
   
+Kolmas viikko
+
+  25.3
+  ~1,5h:  Konstruktorien muuttamista Keyboard-luokassa, KeyboardGeneratorin työstämistä
+  26.6
+  ~1,5h:  Testien uudelleentyöstö Keyboard ja KeyboardGenerator -luokkiin. Paikkamatriisin aloittelua
