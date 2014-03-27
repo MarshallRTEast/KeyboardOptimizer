@@ -13,6 +13,10 @@ Toinen viikko
   ~1h:    Gitin käytön selvittämistä IRC:n avustuksella, ykkösviikon tehtävien uudelleenyrittämistä
   2h:     Ensimmäisten koodinpätkien teko NetBeansissa, ensimmäinen luokka pitkällä, muut vasta alussa
   1,5h:   Testien tekoa, KeyboardGeneratorin miettimistä ja nopeasti määrittelyvaiheen luokkakaavio
+  20.3
+  ~1h:    Lisää testejä, KeyboardGeneratorin aloittelua
+  
+Yhteensä 3,5h
   
 Kolmas viikko
 
@@ -20,3 +24,5 @@ Kolmas viikko
   ~1,5h:  Konstruktorien muuttamista Keyboard-luokassa, KeyboardGeneratorin työstämistä
   26.6
   ~1,5h:  Testien uudelleentyöstö Keyboard ja KeyboardGenerator -luokkiin. Paikkamatriisin aloittelua
+
+Yhteensä h
