@@ -1,11 +1,15 @@
 package keyboardoptimizer.keyboardoptimizer;
 
 import java.util.HashMap;
+import javax.swing.SwingUtilities;
 
 
 public class Main {
 
     public static void main(String[] args) {
+        
+//        UI userInterface = new UI();
+//        SwingUtilities.invokeLater(userInterface);
         
 //        System.out.println("Toimi jo saatana");
 //        System.out.println("Hölömörkö");
@@ -18,10 +22,10 @@ public class Main {
         }
         
         Keyboard defaultKeyboard = new Keyboard(mapOfKeys, keys);
-//        System.out.println(defaultKeyboard);
-//        defaultKeyboard.printPlacementMatrix();
-        defaultKeyboard.placeCharacterIntoMatrix('A', 1, 7);
+        System.out.println(defaultKeyboard);
         defaultKeyboard.printPlacementMatrix();
+//        defaultKeyboard.placeCharacterIntoMatrix('A', 1, 7);
+//        defaultKeyboard.printPlacementMatrix();
 //        
 //        Keyboard keyboard = new Keyboard();
 //        

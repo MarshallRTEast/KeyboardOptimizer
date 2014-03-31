@@ -75,21 +75,72 @@ public class KeyboardTest {
         defaultKeyboard.setOneKeyAmountUsingChar('A', 20);
         assertEquals(20, defaultKeyboard.getAmount('A'));
     }
-    
-   
 
+    @Test
+    public void matriisinGettausToimii() {
+        char[][] matriisi = {{'_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'},
+            {'_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'},
+            {'_', '_', '_', '_', '_', '_', '_', '_',0,0,0,0}};
+        assertEquals(matriisi, defaultKeyboard.getPlacementMatrix());
+    }
+
+    @Test
+    public void matriisiinLisaysToimii() {
+        defaultKeyboard.placeCharacterIntoMatrix('A', 0, 0);
+        char[][] matriisi = defaultKeyboard.getPlacementMatrix();
+        assertEquals('A', matriisi[0][0]);
+
+        defaultKeyboard.placeCharacterIntoMatrix('B', 1, 4);
+        matriisi = defaultKeyboard.getPlacementMatrix();
+        assertEquals('B', matriisi[1][4]);
+
+        defaultKeyboard.placeCharacterIntoMatrix('C', 2, 7);
+        matriisi = defaultKeyboard.getPlacementMatrix();
+        assertEquals('C', matriisi[2][7]);
+
+        defaultKeyboard.placeCharacterIntoMatrix('D', 1, 11);
+        matriisi = defaultKeyboard.getPlacementMatrix();
+        assertEquals('D', matriisi[1][11]);
+    }
+
+    @Test
+    public void matriisistaPoistoMerkillaToimii() {
+        char[][] matriisi = defaultKeyboard.getPlacementMatrix();
+        defaultKeyboard.placeCharacterIntoMatrix('A', 0, 0);
+        defaultKeyboard.placeCharacterIntoMatrix('B', 1, 4);
+        defaultKeyboard.placeCharacterIntoMatrix('D', 2, 7);
+        defaultKeyboard.placeCharacterIntoMatrix('C', 1, 11);
+
+        defaultKeyboard.deleteCharacterFromMatrix('A');
+        defaultKeyboard.deleteCharacterFromMatrix('B');
+        defaultKeyboard.deleteCharacterFromMatrix('C');
+        defaultKeyboard.deleteCharacterFromMatrix('D');
+        assertEquals('_', matriisi[0][0]);
+        assertEquals('_', matriisi[0][4]);
+        assertEquals('_', matriisi[1][11]);
+        assertEquals('_', matriisi[2][7]);
+    }
+
+    @Test
+    public void matriisistaPoistoNodellaToiii() {
+        char[][] matriisi = defaultKeyboard.getPlacementMatrix();
+        defaultKeyboard.placeCharacterIntoMatrix('A', 0, 0);
+        defaultKeyboard.placeCharacterIntoMatrix('B', 1, 4);
+        defaultKeyboard.placeCharacterIntoMatrix('D', 2, 7);
+        defaultKeyboard.placeCharacterIntoMatrix('C', 1, 11);
+
+        defaultKeyboard.deleteMatrixNode(0, 0);
+        defaultKeyboard.deleteMatrixNode(1, 4);
+        defaultKeyboard.deleteMatrixNode(1, 11);
+        defaultKeyboard.deleteMatrixNode(2, 7);
+
+        assertEquals('_', matriisi[0][0]);
+        assertEquals('_', matriisi[0][4]);
+        assertEquals('_', matriisi[1][11]);
+        assertEquals('_', matriisi[2][7]);
+    }
 }
-
-
-
-
-
-
-
-
-
-
-    // turha testi, jos metodi poistetaan
+// turha testi, jos metodi poistetaan
 //    @Test
 //    public void defaultKonstruktoriSetIndeksillaJaToStringToimii() {
 //
@@ -99,8 +150,8 @@ public class KeyboardTest {
 //
 //        assertEquals("A: 10, B: 5, C: 1, D: 0, E: 0, F: 0, G: 0, H: 0, I: 0, J: 0, K: 0, L: 0, M: 0, N: 0, O: 0, P: 0, Q: 0, R: 0, S: 0, T: 0, U: 0, V: 0, W: 0, X: 0, Y: 0, Z: 0, Å: 0, Ä: 0, Ö: 0", keyboard.toString());
 //    }
-    //
-    // turha testi, jos Set indeksillä poistetaan
+//
+// turha testi, jos Set indeksillä poistetaan
 //    @Test
 //    public void getteriToimiiOikeinSetIndeksilla() {
 //
@@ -108,8 +159,8 @@ public class KeyboardTest {
 //
 //        assertEquals(10, keyboard.getAmount('D'));
 //    }
-    //
-    // turha testi, jos set Indeksillä poistetaan
+//
+// turha testi, jos set Indeksillä poistetaan
 //    @Test
 //    public void setIndexMuuttaaArvoa() {
 //
@@ -119,8 +170,8 @@ public class KeyboardTest {
 //        keyboard.setOneKeyAmountUsingIndex(4, 5);
 //        assertEquals(5, keyboard.getAmount('D'));
 //    }
-    //
-    // toisen konstruktorin poiston jälkeen turha
+//
+// toisen konstruktorin poiston jälkeen turha
 //    @Test
 //    public void parametrillinenKonstruktoriToimii() {
 //

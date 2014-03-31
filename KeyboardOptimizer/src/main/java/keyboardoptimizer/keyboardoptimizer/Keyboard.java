@@ -23,7 +23,7 @@ public class Keyboard {
         for (int i = 0; i < 12; i++) {
             placementMatrix[0][i] = '_';
             placementMatrix[1][i] = '_';
-            if (i < 9) {
+            if (i < 8) {
                 placementMatrix[2][i] = '_';
             }
         }
@@ -55,15 +55,20 @@ public class Keyboard {
         return output;
     }
 
-    public void printPlacementMatrix() {
-        for (int n = 0; n < placementMatrix.length; n++) {
-            for (int m = 0; m < placementMatrix[n].length; m++) {
-                if (!(n == 2 && m > 8)) {
-                    System.out.print("|" + placementMatrix[n][m]);
-                }
-            }
-            System.out.println("|");
-        }
+    // ei koodin kannalta välttämättä tarpeellinen, lähinnä itselle selvennykseksi
+//    public void printPlacementMatrix() {
+//        for (int n = 0; n < placementMatrix.length; n++) {
+//            for (int m = 0; m < placementMatrix[n].length; m++) {
+//                if (!(n == 2 && m > 8)) {
+//                    System.out.print("|" + placementMatrix[n][m]);
+//                }
+//            }
+//            System.out.println("|");
+//        }
+//    }
+    
+    public char[][] getPlacementMatrix() {
+        return this.placementMatrix;
     }
 
     public void placeCharacterIntoMatrix(char toBePlaced, int n, int m) {
