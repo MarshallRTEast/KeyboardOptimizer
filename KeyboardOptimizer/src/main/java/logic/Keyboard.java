@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package keyboardoptimizer.keyboardoptimizer;
+package logic;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -66,7 +66,6 @@ public class Keyboard {
 //            System.out.println("|");
 //        }
 //    }
-    
     public char[][] getPlacementMatrix() {
         return this.placementMatrix;
     }

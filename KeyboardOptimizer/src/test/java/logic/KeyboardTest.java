@@ -1,7 +1,8 @@
+package logic;
+
 
 import java.util.HashMap;
 import java.util.Map;
-import keyboardoptimizer.keyboardoptimizer.Keyboard;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

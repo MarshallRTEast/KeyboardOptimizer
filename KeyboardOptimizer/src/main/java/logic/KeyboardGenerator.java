@@ -1,4 +1,4 @@
-package keyboardoptimizer.keyboardoptimizer;
+package logic;
 
 import java.io.File;
 import java.util.HashMap;

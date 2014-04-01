@@ -1,11 +1,11 @@
+package logic;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
 import java.util.HashMap;
-import keyboardoptimizer.keyboardoptimizer.Keyboard;
-import keyboardoptimizer.keyboardoptimizer.KeyboardGenerator;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
