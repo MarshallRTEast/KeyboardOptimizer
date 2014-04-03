@@ -19,7 +19,13 @@ import static org.junit.Assert.*;
  */
 public class KeyboardGeneratorTest {
 
+    /**
+     * 
+     */
     Keyboard defaultKeyboard;
+    /**
+     * 
+     */
     HashMap<Character, Integer> mapOfKeys;
 
     public KeyboardGeneratorTest() {

@@ -79,9 +79,9 @@ public class KeyboardTest {
 
     @Test
     public void matriisinGettausToimii() {
-        char[][] matriisi = {{'_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'},
-            {'_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'},
-            {'_', '_', '_', '_', '_', '_', '_', '_',0,0,0,0}};
+        char[][] matriisi = {{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',0,0,0,0}};
         assertEquals(matriisi, defaultKeyboard.getPlacementMatrix());
     }
 
@@ -116,10 +116,10 @@ public class KeyboardTest {
         defaultKeyboard.deleteCharacterFromMatrix('B');
         defaultKeyboard.deleteCharacterFromMatrix('C');
         defaultKeyboard.deleteCharacterFromMatrix('D');
-        assertEquals('_', matriisi[0][0]);
-        assertEquals('_', matriisi[0][4]);
-        assertEquals('_', matriisi[1][11]);
-        assertEquals('_', matriisi[2][7]);
+        assertEquals(' ', matriisi[0][0]);
+        assertEquals(' ', matriisi[0][4]);
+        assertEquals(' ', matriisi[1][11]);
+        assertEquals(' ', matriisi[2][7]);
     }
 
     @Test
@@ -135,10 +135,10 @@ public class KeyboardTest {
         defaultKeyboard.deleteMatrixNode(1, 11);
         defaultKeyboard.deleteMatrixNode(2, 7);
 
-        assertEquals('_', matriisi[0][0]);
-        assertEquals('_', matriisi[0][4]);
-        assertEquals('_', matriisi[1][11]);
-        assertEquals('_', matriisi[2][7]);
+        assertEquals(' ', matriisi[0][0]);
+        assertEquals(' ', matriisi[0][4]);
+        assertEquals(' ', matriisi[1][11]);
+        assertEquals(' ', matriisi[2][7]);
     }
 }
 // turha testi, jos metodi poistetaan

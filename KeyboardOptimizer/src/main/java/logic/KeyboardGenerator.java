@@ -1,3 +1,8 @@
+/**
+ * Luokka saa parametrikseen tiedoston ja luo sen pohjalta Keyboard-olion, johon
+ * on laskettu tiedostosta löytyvät merkkien määrät. Käytettävät merkit voi
+ * valita joko itse tai käyttää suomalaisia isoja aakkosia.
+ */
 package logic;
 
 import java.io.File;
@@ -13,8 +18,14 @@ public class KeyboardGenerator {
     private HashMap<Character, Integer> mapOfKeys;
     private String keys;
 
-// defaultKonstruktori, luo Keyboard-olion pelkästään kirjain-näppäimille
-    public KeyboardGenerator(String filePath) throws Exception{
+    /**
+     * Konstruktori, joka luo Keyboard-olion käyttäen suomalaisia isoja
+     * kirjaimia.
+     *
+     * @param filePath
+     * @throws Exception
+     */
+    public KeyboardGenerator(String filePath) throws Exception {
         this.file = new File(filePath);
         this.mapOfKeys = new HashMap<Character, Integer>();
         this.keys = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
@@ -23,7 +34,13 @@ public class KeyboardGenerator {
         }
     }
 
-    // konstruktori jos halutaan käyttää custom-merkkejä näppäimistön luomiseen
+    /**
+     * Konstruktori, joka luo Keyboard-olion käyttäen valittuja merkkejä.
+     *
+     * @param filePath
+     * @param keys
+     * @throws Exception
+     */
     public KeyboardGenerator(String filePath, String keys) throws Exception {
         this.keys = keys;
         this.file = new File(filePath);
@@ -35,12 +52,21 @@ public class KeyboardGenerator {
         }
     }
 
+    /**
+     *Metodi luo Keyboard-olion, jonka jokaiseen merkkiin liittyvä määrä on 0.
+     * @return  Tyhjä Keyboard-olio.
+     */
     public Keyboard createEmptyKeyboard() {
         Keyboard keyboard = new Keyboard(mapOfKeys, keys);
         return keyboard;
     }
 
-
+    /**
+     * Metodi laskee tiedostosta kirjaimet ja luo uuden Keyboard-olion käyttäen näitä merkkejä ja niihin liittyviä määriä.
+     * 
+     * @return  Uusi Keyboard-olio, johon on laskettu merkkeihin liittyvät määrät.
+     * @throws Exception 
+     */
     public Keyboard countInstancesOfKeysAndCreateKeyboard() throws Exception {
         Scanner scanner = new Scanner(this.file);
         while (scanner.hasNextLine()) {
@@ -56,4 +82,3 @@ public class KeyboardGenerator {
         return keyboard;
     }
 }
-

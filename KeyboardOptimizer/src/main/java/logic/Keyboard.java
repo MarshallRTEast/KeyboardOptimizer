@@ -1,6 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Luokka toimii Keyboard-oliona, jolla on tiedossa sille asetetut näppäimet ja niihin liittyvät määrät.
+ * Lisäksi luokassa voidaan asettaa jokaiselle merkille paikka näppäimistöä kuvaavassa matriisissa.
  */
 package logic;
 
@@ -14,28 +14,47 @@ public class Keyboard {
     private String keys;
     private char[][] placementMatrix;
 
-    // tällähetkellä luo placementMatrixin pelkästään kirjaimille, pitää miettiä miten toteuttaa laajentamisen suhteen:
-    // parametrina vaiko vain joku riittävän iso matriisi?
+    
+    /**
+     * 
+     * @param mapOfKeys HashMap, johon on talletettuna merkit ja niihin liittyvät määrät.
+     * @param keys  HashMapin sisältämät merkit String-muodossa.
+     */
     public Keyboard(HashMap<Character, Integer> mapOfKeys, String keys) {
         this.mapOfKeys = mapOfKeys;
         this.keys = keys;
         this.placementMatrix = new char[3][12];
-        for (int i = 0; i < 12; i++) {
-            placementMatrix[0][i] = '_';
-            placementMatrix[1][i] = '_';
-            if (i < 8) {
-                placementMatrix[2][i] = '_';
+        for (int i = 0; i < 6; i++) {
+            int k = 0;
+            if (i == 1 || i == 2) {
+                k = 21;
+            } else if (i == 4) {
+                k = 18;
+            } else if (i == 5) {
+                k = 13;
+            } else {
+                k = 16;
+            }
+            for (int j = 0; j < k; j++) {
+                placementMatrix[i][j] = ' ';
             }
         }
     }
 
+    
+    /**
+     * Metodilla asetetaan tiettyyn merkkiin jokin arvo olion mapOfKeys HashMapissä.
+     * 
+     * @param key   Merkki, jolle lisätään arvo
+     * @param amount    Arvo, joka merkille lisätään
+     */
     public void setOneKeyAmountUsingChar(char key, int amount) {
         if (this.mapOfKeys.containsKey(key)) {
             this.mapOfKeys.put(key, amount);
         }
     }
 
-    // palautetaan merkkiin liittyvä määrä
+    
     public int getAmount(char key) {
         if (!mapOfKeys.containsKey(key)) {
             return 0;
@@ -70,19 +89,37 @@ public class Keyboard {
         return this.placementMatrix;
     }
 
+    /**
+     * Metodissa lisätään olion mapOfKeys HashMapista jokin merkki tietylle paikalle näppäimistö kuvaavaan matriisiin.
+     * 
+     * @param toBePlaced Merkki jota ollaa lisäämässä matriisiin
+     * @param n Lisäyspaikan korkeuskoordinaatti matriisissa.
+     * @param m Lisäyspaikan leveyskoordinaatti matriisissa.
+     */
     public void placeCharacterIntoMatrix(char toBePlaced, int n, int m) {
         placementMatrix[n][m] = toBePlaced;
     }
 
+    /**
+     * Metodilla tyhjennetään paikkamatriisista tietty lokero.
+     * 
+     * @param n     Lokeron korkeuskoordinaatti matriisissa.
+     * @param m     Lokeron leveyskoordinaatti matriisissa.
+     */
     public void deleteMatrixNode(int n, int m) {
-        placementMatrix[n][m] = '_';
+        placementMatrix[n][m] = ' ';
     }
 
+    /**
+     * Metodilla poistetaan paikkamatriisista tietty merkki ja korvataan se välilyönnillä.
+     * 
+     * @param toBeDeleted Poistettava merkki
+     */
     public void deleteCharacterFromMatrix(char toBeDeleted) {
         for (int n = 0; n < placementMatrix.length; n++) {
             for (int m = 0; m < placementMatrix[n].length; m++) {
                 if (placementMatrix[n][m] == toBeDeleted) {
-                    placementMatrix[n][m] = '_';
+                    placementMatrix[n][m] = ' ';
                     return;
                 }
             }
