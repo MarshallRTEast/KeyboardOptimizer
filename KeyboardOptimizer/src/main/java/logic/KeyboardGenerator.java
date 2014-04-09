@@ -1,8 +1,3 @@
-/**
- * Luokka saa parametrikseen tiedoston ja luo sen pohjalta Keyboard-olion, johon
- * on laskettu tiedostosta löytyvät merkkien määrät. Käytettävät merkit voi
- * valita joko itse tai käyttää suomalaisia isoja aakkosia.
- */
 package logic;
 
 import java.io.File;
@@ -10,8 +5,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-// saa parametrikseen tekstitiedoston, josta lukee kirjaimet ja luo niiden perusteella Keyboard-olion
-// Suoraan File parametrina vaiko String-tyyppinen polku tiedostoon?
+/**
+ * Luokka saa parametrikseen tiedoston ja luo sen pohjalta Keyboard-olion, johon
+ * on laskettu tiedostosta löytyvät merkkien määrät. Käytettävät merkit voi
+ * valita joko itse tai käyttää suomalaisia isoja aakkosia.
+ */
 public class KeyboardGenerator {
 
     private File file;

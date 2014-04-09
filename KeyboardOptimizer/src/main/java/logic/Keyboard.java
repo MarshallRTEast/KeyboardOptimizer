@@ -1,6 +1,7 @@
 /**
- * Luokka toimii Keyboard-oliona, jolla on tiedossa sille asetetut näppäimet ja niihin liittyvät määrät.
- * Lisäksi luokassa voidaan asettaa jokaiselle merkille paikka näppäimistöä kuvaavassa matriisissa.
+ * Luokka toimii Keyboard-oliona, jolla on tiedossa sille asetetut näppäimet ja
+ * niihin liittyvät määrät. Lisäksi luokassa voidaan asettaa jokaiselle merkille
+ * paikka näppäimistöä kuvaavassa matriisissa.
  */
 package logic;
 
@@ -14,11 +15,11 @@ public class Keyboard {
     private String keys;
     private char[][] placementMatrix;
 
-    
     /**
-     * 
-     * @param mapOfKeys HashMap, johon on talletettuna merkit ja niihin liittyvät määrät.
-     * @param keys  HashMapin sisältämät merkit String-muodossa.
+     *
+     * @param mapOfKeys HashMap, johon on talletettuna merkit ja niihin
+     * liittyvät määrät.
+     * @param keys HashMapin sisältämät merkit String-muodossa.
      */
     public Keyboard(HashMap<Character, Integer> mapOfKeys, String keys) {
         this.mapOfKeys = mapOfKeys;
@@ -41,12 +42,12 @@ public class Keyboard {
         }
     }
 
-    
     /**
-     * Metodilla asetetaan tiettyyn merkkiin jokin arvo olion mapOfKeys HashMapissä.
-     * 
-     * @param key   Merkki, jolle lisätään arvo
-     * @param amount    Arvo, joka merkille lisätään
+     * Metodilla asetetaan tiettyyn merkkiin jokin arvo olion mapOfKeys
+     * HashMapissä.
+     *
+     * @param key Merkki, jolle lisätään arvo
+     * @param amount Arvo, joka merkille lisätään
      */
     public void setOneKeyAmountUsingChar(char key, int amount) {
         if (this.mapOfKeys.containsKey(key)) {
@@ -54,7 +55,6 @@ public class Keyboard {
         }
     }
 
-    
     public int getAmount(char key) {
         if (!mapOfKeys.containsKey(key)) {
             return 0;
@@ -74,24 +74,14 @@ public class Keyboard {
         return output;
     }
 
-    // ei koodin kannalta välttämättä tarpeellinen, lähinnä itselle selvennykseksi
-//    public void printPlacementMatrix() {
-//        for (int n = 0; n < placementMatrix.length; n++) {
-//            for (int m = 0; m < placementMatrix[n].length; m++) {
-//                if (!(n == 2 && m > 8)) {
-//                    System.out.print("|" + placementMatrix[n][m]);
-//                }
-//            }
-//            System.out.println("|");
-//        }
-//    }
     public char[][] getPlacementMatrix() {
         return this.placementMatrix;
     }
 
     /**
-     * Metodissa lisätään olion mapOfKeys HashMapista jokin merkki tietylle paikalle näppäimistö kuvaavaan matriisiin.
-     * 
+     * Metodissa lisätään olion mapOfKeys HashMapista jokin merkki tietylle
+     * paikalle näppäimistö kuvaavaan matriisiin.
+     *
      * @param toBePlaced Merkki jota ollaa lisäämässä matriisiin
      * @param n Lisäyspaikan korkeuskoordinaatti matriisissa.
      * @param m Lisäyspaikan leveyskoordinaatti matriisissa.
@@ -102,17 +92,18 @@ public class Keyboard {
 
     /**
      * Metodilla tyhjennetään paikkamatriisista tietty lokero.
-     * 
-     * @param n     Lokeron korkeuskoordinaatti matriisissa.
-     * @param m     Lokeron leveyskoordinaatti matriisissa.
+     *
+     * @param n Lokeron korkeuskoordinaatti matriisissa.
+     * @param m Lokeron leveyskoordinaatti matriisissa.
      */
     public void deleteMatrixNode(int n, int m) {
         placementMatrix[n][m] = ' ';
     }
 
     /**
-     * Metodilla poistetaan paikkamatriisista tietty merkki ja korvataan se välilyönnillä.
-     * 
+     * Metodilla poistetaan paikkamatriisista tietty merkki ja korvataan se
+     * välilyönnillä.
+     *
      * @param toBeDeleted Poistettava merkki
      */
     public void deleteCharacterFromMatrix(char toBeDeleted) {
@@ -133,4 +124,15 @@ public class Keyboard {
 //        }
 //    }
     // voidaan asettaa tietty arvo tietylle merkille
+    // ei koodin kannalta välttämättä tarpeellinen, lähinnä itselle selvennykseksi
+//    public void printPlacementMatrix() {
+//        for (int n = 0; n < placementMatrix.length; n++) {
+//            for (int m = 0; m < placementMatrix[n].length; m++) {
+//                if (!(n == 2 && m > 8)) {
+//                    System.out.print("|" + placementMatrix[n][m]);
+//                }
+//            }
+//            System.out.println("|");
+//        }
+//    }
 }
