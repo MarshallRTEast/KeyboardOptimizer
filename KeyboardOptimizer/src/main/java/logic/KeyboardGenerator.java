@@ -1,6 +1,7 @@
 package logic;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -23,7 +24,7 @@ public class KeyboardGenerator {
      * @param filePath
      * @throws Exception
      */
-    public KeyboardGenerator(String filePath) throws Exception {
+    public KeyboardGenerator(String filePath) throws FileNotFoundException {
         this.file = new File(filePath);
         this.mapOfKeys = new HashMap<Character, Integer>();
         this.keys = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
@@ -39,7 +40,7 @@ public class KeyboardGenerator {
      * @param keys
      * @throws Exception
      */
-    public KeyboardGenerator(String filePath, String keys) throws Exception {
+    public KeyboardGenerator(String filePath, String keys) throws FileNotFoundException {
         this.keys = keys;
         this.file = new File(filePath);
         this.mapOfKeys = new HashMap<Character, Integer>();

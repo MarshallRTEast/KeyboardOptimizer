@@ -1,14 +1,14 @@
-/**
- * Luokka toimii Keyboard-oliona, jolla on tiedossa sille asetetut näppäimet ja
- * niihin liittyvät määrät. Lisäksi luokassa voidaan asettaa jokaiselle merkille
- * paikka näppäimistöä kuvaavassa matriisissa.
- */
 package logic;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Luokka toimii Keyboard-oliona, jolla on tiedossa sille asetetut näppäimet ja
+ * niihin liittyvät määrät. Lisäksi luokassa voidaan asettaa jokaiselle merkille
+ * paikka näppäimistöä kuvaavassa matriisissa.
+ */
 public class Keyboard {
 
     private Map<Character, Integer> mapOfKeys;

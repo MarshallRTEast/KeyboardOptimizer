@@ -2039,7 +2039,8 @@ public class NewUI extends javax.swing.JFrame {
 
     private void CreatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreatButtonActionPerformed
         try {
-            if (SetCustomKeyset.isSelected()) {
+            // iffi pitää tarkistaa onko se oikein!!
+            if (!SetCustomKeyset.isSelected()) {
                 KeyboardGenerator KBGen = new KeyboardGenerator(FilePathArea.getText());
                 Keyboard keyboard = KBGen.countInstancesOfKeysAndCreateKeyboard();
                 keyboard.toString();
