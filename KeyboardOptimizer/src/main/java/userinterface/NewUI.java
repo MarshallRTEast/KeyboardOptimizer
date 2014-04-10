@@ -5,6 +5,10 @@
  */
 package userinterface;
 
+import java.awt.Color;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JToggleButton;
 import logic.Keyboard;
 import logic.KeyboardGenerator;
 
@@ -38,7 +42,7 @@ public class NewUI extends javax.swing.JFrame {
         KeySetArea = new javax.swing.JTextArea();
         SetCustomKeyset = new javax.swing.JToggleButton();
         CreatButton = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        KeysPanel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
@@ -153,7 +157,6 @@ public class NewUI extends javax.swing.JFrame {
         setBackground(new java.awt.Color(142, 196, 206));
         setBounds(new java.awt.Rectangle(50, 0, 1200, 620));
         setName("Keyboard Optimizer"); // NOI18N
-        setUndecorated(true);
 
         jLabel1.setText("Keyset:");
 
@@ -191,20 +194,20 @@ public class NewUI extends javax.swing.JFrame {
         CreatButton.setToolTipText("");
         CreatButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CreatButtonActionPerformed(evt);
+                CreateButtonActionPerformed(evt);
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(189, 189, 189));
+        KeysPanel.setBackground(new java.awt.Color(160, 160, 160));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout KeysPanelLayout = new javax.swing.GroupLayout(KeysPanel);
+        KeysPanel.setLayout(KeysPanelLayout);
+        KeysPanelLayout.setHorizontalGroup(
+            KeysPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        KeysPanelLayout.setVerticalGroup(
+            KeysPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 83, Short.MAX_VALUE)
         );
 
@@ -1736,7 +1739,7 @@ public class NewUI extends javax.swing.JFrame {
                         .addComponent(jPanel107, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel108, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1968,10 +1971,10 @@ public class NewUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(KeysPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1986,7 +1989,7 @@ public class NewUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(jLabel3))
-                .addGap(0, 406, Short.MAX_VALUE))
+                .addGap(0, 38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2006,7 +2009,7 @@ public class NewUI extends javax.swing.JFrame {
                         .addComponent(CreatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(KeysPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGap(29, 29, 29)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -2014,22 +2017,24 @@ public class NewUI extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // vois ehkä laittaa Swing Windows -> File Chooser FilePathin tilalle
+
     private void SetCustomKeysetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetCustomKeysetActionPerformed
         if (SetCustomKeyset.isSelected()) {
-        KeySetArea.setEnabled(true);
-        KeySetArea.setOpaque(true);
-        SetCustomKeyset.setSelected(true);
+            KeySetArea.setEnabled(true);
+            KeySetArea.setOpaque(true);
+            SetCustomKeyset.setSelected(true);
         } else {
-        KeySetArea.setText("");
-        KeySetArea.setEnabled(false);
-        KeySetArea.setOpaque(false);
-        SetCustomKeyset.setSelected(false);
+            KeySetArea.setText("");
+            KeySetArea.setEnabled(false);
+            KeySetArea.setOpaque(false);
+            SetCustomKeyset.setSelected(false);
         }
     }//GEN-LAST:event_SetCustomKeysetActionPerformed
 
@@ -2037,22 +2042,90 @@ public class NewUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_KeySetAreaComponentAdded
 
-    private void CreatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreatButtonActionPerformed
+    private void CreateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateButtonActionPerformed
         try {
-            // iffi pitää tarkistaa onko se oikein!!
             if (!SetCustomKeyset.isSelected()) {
                 KeyboardGenerator KBGen = new KeyboardGenerator(FilePathArea.getText());
                 Keyboard keyboard = KBGen.countInstancesOfKeysAndCreateKeyboard();
-                keyboard.toString();
+                System.out.println(keyboard);
+                CreateKeyButtons(keyboard);
             } else {
                 KeyboardGenerator KBGen = new KeyboardGenerator(FilePathArea.getText(), KeySetArea.getText());
                 Keyboard keyboard = KBGen.countInstancesOfKeysAndCreateKeyboard();
-                keyboard.toString();
+                System.out.println(keyboard);
+                CreateKeyButtons(keyboard);
             }
         } catch (Exception e) {
             System.out.println("Tiedostoa ei löytynyt!");
         }
-    }//GEN-LAST:event_CreatButtonActionPerformed
+    }//GEN-LAST:event_CreateButtonActionPerformed
+    // laskee merkkien määrän, jos < x, niin koko on nxm, jos >x koko on 2nx2m, jos >y koko on 3nx3m tjsp
+    // kutsuu jokaiselle merkille CreateKeyButtonsia tietyllä koolla
+    private void CountAmountOfKeys(Keyboard keyboard) {
+
+    }
+
+    // luo uudet buttonit kirjaintilaan, pitää laskea myös määrä = taustaväri
+    private void CreateKeyButtons(Keyboard keyboard) {
+        if (keyboard.getAmountOfAllKeys() > 0) {
+            for (char key : keyboard.getMapOfKeys().keySet()) {
+                JToggleButton keyButton = new JToggleButton("" + key);
+                int[] RGB = selectColourForButton(keyboard, key);
+                Color color = new Color(RGB[0], RGB[1], RGB[2]);
+                keyButton.setBackground(color);
+                KeysPanel.add(keyButton);
+            }
+        }
+        KeysPanel.repaint();
+    }
+
+    private int[] selectColourForButton(Keyboard keyboard, char key) {
+        int[] RGB = new int[3];
+        int all = keyboard.getAmountOfAllKeys();
+        int keyAmount = keyboard.getAmount(key);
+        if (keyAmount / all < 0.1) {
+            RGB[0] = 2;
+            RGB[1] = 110;
+            RGB[2] = 58;
+        } else if (keyAmount / all < 0.2) {
+            RGB[0] = 4;
+            RGB[1] = 180;
+            RGB[2] = 37;
+        } else if (keyAmount / all < 0.3) {
+            RGB[0] = 6;
+            RGB[1] = 244;
+            RGB[2] = 50;
+        } else if (keyAmount / all < 0.4) {
+            RGB[0] = 185;
+            RGB[1] = 244;
+            RGB[2] = 5;
+        } else if (keyAmount / all < 0.5) {
+            RGB[0] = 244;
+            RGB[1] = 244;
+            RGB[2] = 8;
+        } else if (keyAmount / all < 0.6) {
+            RGB[0] = 244;
+            RGB[1] = 139;
+            RGB[2] = 9;
+        } else if (keyAmount / all < 0.7) {
+            RGB[0] = 244;
+            RGB[1] = 79;
+            RGB[2] = 2;
+        } else if (keyAmount / all < 0.8) {
+            RGB[0] = 205;
+            RGB[1] = 4;
+            RGB[2] = 4;
+        } else if (keyAmount / all < 0.9) {
+            RGB[0] = 132;
+            RGB[1] = 2;
+            RGB[2] = 2;
+        } else {
+            RGB[0] = 54;
+            RGB[1] = 0;
+            RGB[2] = 0;
+        }
+        return RGB;
+    }
 
     private void SetCustomKeysetStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SetCustomKeysetStateChanged
         // TODO add your handling code here:
@@ -2096,12 +2169,12 @@ public class NewUI extends javax.swing.JFrame {
     private javax.swing.JButton CreatButton;
     private javax.swing.JTextArea FilePathArea;
     private javax.swing.JTextArea KeySetArea;
+    private javax.swing.JPanel KeysPanel;
     private javax.swing.JToggleButton SetCustomKeyset;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel100;
     private javax.swing.JPanel jPanel101;

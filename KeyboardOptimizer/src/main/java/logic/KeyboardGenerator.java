@@ -3,7 +3,6 @@ package logic;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -22,7 +21,7 @@ public class KeyboardGenerator {
      * kirjaimia.
      *
      * @param filePath
-     * @throws Exception
+     * @throws java.io.FileNotFoundException
      */
     public KeyboardGenerator(String filePath) throws FileNotFoundException {
         this.file = new File(filePath);
@@ -38,7 +37,7 @@ public class KeyboardGenerator {
      *
      * @param filePath
      * @param keys
-     * @throws Exception
+     * @throws java.io.FileNotFoundException
      */
     public KeyboardGenerator(String filePath, String keys) throws FileNotFoundException {
         this.keys = keys;
@@ -64,9 +63,9 @@ public class KeyboardGenerator {
      * Metodi laskee tiedostosta kirjaimet ja luo uuden Keyboard-olion käyttäen näitä merkkejä ja niihin liittyviä määriä.
      * 
      * @return  Uusi Keyboard-olio, johon on laskettu merkkeihin liittyvät määrät.
-     * @throws Exception 
+     * @throws java.io.FileNotFoundException 
      */
-    public Keyboard countInstancesOfKeysAndCreateKeyboard() throws Exception {
+    public Keyboard countInstancesOfKeysAndCreateKeyboard() throws FileNotFoundException {
         Scanner scanner = new Scanner(this.file);
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();

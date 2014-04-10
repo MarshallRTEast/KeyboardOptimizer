@@ -2,7 +2,6 @@ package logic;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Luokka toimii Keyboard-oliona, jolla on tiedossa sille asetetut näppäimet ja
@@ -14,6 +13,7 @@ public class Keyboard {
     private Map<Character, Integer> mapOfKeys;
     private String keys;
     private char[][] placementMatrix;
+    private int amountOfKeys;
 
     /**
      *
@@ -24,7 +24,7 @@ public class Keyboard {
     public Keyboard(HashMap<Character, Integer> mapOfKeys, String keys) {
         this.mapOfKeys = mapOfKeys;
         this.keys = keys;
-        this.placementMatrix = new char[3][12];
+        this.placementMatrix = new char[6][21];
         for (int i = 0; i < 6; i++) {
             int k = 0;
             if (i == 1 || i == 2) {
@@ -37,11 +37,18 @@ public class Keyboard {
                 k = 16;
             }
             for (int j = 0; j < k; j++) {
-                placementMatrix[i][j] = ' ';
+                this.placementMatrix[i][j] = ' ';
             }
+        }
+        for (char key : mapOfKeys.keySet()) {
+            this.amountOfKeys += mapOfKeys.get(key);
         }
     }
 
+    public int getAmountOfAllKeys() {        
+        return this.amountOfKeys;
+    }
+    
     /**
      * Metodilla asetetaan tiettyyn merkkiin jokin arvo olion mapOfKeys
      * HashMapissä.
@@ -53,6 +60,10 @@ public class Keyboard {
         if (this.mapOfKeys.containsKey(key)) {
             this.mapOfKeys.put(key, amount);
         }
+    }
+    
+    public Map<Character, Integer> getMapOfKeys() {
+        return this.mapOfKeys;
     }
 
     public int getAmount(char key) {
