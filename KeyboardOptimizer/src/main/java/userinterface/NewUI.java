@@ -6,6 +6,7 @@
 package userinterface;
 
 import java.awt.Color;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JToggleButton;
@@ -164,6 +165,7 @@ public class NewUI extends javax.swing.JFrame {
 
         FilePathArea.setColumns(20);
         FilePathArea.setRows(5);
+        FilePathArea.setText("src/Testitiedostot/Testifilu1.txt");
         jScrollPane1.setViewportView(FilePathArea);
 
         KeySetArea.setColumns(20);
@@ -2056,7 +2058,8 @@ public class NewUI extends javax.swing.JFrame {
                 CreateKeyButtons(keyboard);
             }
         } catch (Exception e) {
-            System.out.println("Tiedostoa ei löytynyt!");
+            System.out.println("Tiedostoa ei löytynyt!\n");
+            e.printStackTrace();
         }
     }//GEN-LAST:event_CreateButtonActionPerformed
     // laskee merkkien määrän, jos < x, niin koko on nxm, jos >x koko on 2nx2m, jos >y koko on 3nx3m tjsp
@@ -2067,55 +2070,63 @@ public class NewUI extends javax.swing.JFrame {
 
     // luo uudet buttonit kirjaintilaan, pitää laskea myös määrä = taustaväri
     private void CreateKeyButtons(Keyboard keyboard) {
-        if (keyboard.getAmountOfAllKeys() > 0) {
+        // LayOut pitää vaihtaa
+        KeysPanel.setLayout(new javax.swing.BoxLayout(KeysPanel, BoxLayout.X_AXIS));
+        if (!keyboard.getMapOfKeys().isEmpty()) {
             for (char key : keyboard.getMapOfKeys().keySet()) {
-                JToggleButton keyButton = new JToggleButton("" + key);
+                // "" + key
+                JToggleButton keyButton = new javax.swing.JToggleButton();
+                keyButton.setText(key + "");
                 int[] RGB = selectColourForButton(keyboard, key);
                 Color color = new Color(RGB[0], RGB[1], RGB[2]);
                 keyButton.setBackground(color);
                 KeysPanel.add(keyButton);
+                KeysPanel.validate();
             }
         }
+        System.out.println(keyboard.getAmountOfAllKeys());
         KeysPanel.repaint();
     }
 
+    // keyboard.getAmountOfAllKeys ei toimi, sillä haluis KAIKKIEN merkkien määrän, ei vaan haettujen
     private int[] selectColourForButton(Keyboard keyboard, char key) {
         int[] RGB = new int[3];
         int all = keyboard.getAmountOfAllKeys();
         int keyAmount = keyboard.getAmount(key);
-        if (keyAmount / all < 0.1) {
+        System.out.println(key + " " + keyAmount);
+        if ((double)keyAmount / all < 0.1) {
             RGB[0] = 2;
             RGB[1] = 110;
             RGB[2] = 58;
-        } else if (keyAmount / all < 0.2) {
+        } else if ((double)keyAmount / all < 0.2) {
             RGB[0] = 4;
             RGB[1] = 180;
             RGB[2] = 37;
-        } else if (keyAmount / all < 0.3) {
+        } else if ((double)keyAmount / all < 0.3) {
             RGB[0] = 6;
             RGB[1] = 244;
             RGB[2] = 50;
-        } else if (keyAmount / all < 0.4) {
+        } else if ((double)keyAmount / all < 0.4) {
             RGB[0] = 185;
             RGB[1] = 244;
             RGB[2] = 5;
-        } else if (keyAmount / all < 0.5) {
+        } else if ((double)keyAmount / all < 0.5) {
             RGB[0] = 244;
             RGB[1] = 244;
             RGB[2] = 8;
-        } else if (keyAmount / all < 0.6) {
+        } else if ((double)keyAmount / all < 0.6) {
             RGB[0] = 244;
             RGB[1] = 139;
             RGB[2] = 9;
-        } else if (keyAmount / all < 0.7) {
+        } else if ((double)keyAmount / all < 0.7) {
             RGB[0] = 244;
             RGB[1] = 79;
             RGB[2] = 2;
-        } else if (keyAmount / all < 0.8) {
+        } else if ((double)keyAmount / all < 0.8) {
             RGB[0] = 205;
             RGB[1] = 4;
             RGB[2] = 4;
-        } else if (keyAmount / all < 0.9) {
+        } else if ((double)keyAmount / all < 0.9) {
             RGB[0] = 132;
             RGB[1] = 2;
             RGB[2] = 2;

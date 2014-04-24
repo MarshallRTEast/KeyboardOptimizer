@@ -2,8 +2,9 @@ package logic;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 /**
  * Luokka saa parametrikseen tiedoston ja luo sen pohjalta Keyboard-olion, johon
@@ -13,7 +14,7 @@ import java.util.Scanner;
 public class KeyboardGenerator {
 
     private File file;
-    private HashMap<Character, Integer> mapOfKeys;
+    private Map<Character, Integer> mapOfKeys;
     private String keys;
 
     /**
@@ -25,7 +26,7 @@ public class KeyboardGenerator {
      */
     public KeyboardGenerator(String filePath) throws FileNotFoundException {
         this.file = new File(filePath);
-        this.mapOfKeys = new HashMap<Character, Integer>();
+        this.mapOfKeys = new TreeMap<Character, Integer>() {};
         this.keys = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
         for (int i = 0; i < keys.length(); i++) {
             mapOfKeys.put(keys.charAt(i), 0);
@@ -42,7 +43,7 @@ public class KeyboardGenerator {
     public KeyboardGenerator(String filePath, String keys) throws FileNotFoundException {
         this.keys = keys;
         this.file = new File(filePath);
-        this.mapOfKeys = new HashMap<Character, Integer>();
+        this.mapOfKeys = new TreeMap<Character, Integer>();
         for (int i = 0; i < keys.length(); i++) {
             if (!mapOfKeys.containsKey(keys.charAt(i))) {
                 mapOfKeys.put(keys.charAt(i), 0);

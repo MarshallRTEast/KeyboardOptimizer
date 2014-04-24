@@ -17,11 +17,11 @@ public class Keyboard {
 
     /**
      *
-     * @param mapOfKeys HashMap, johon on talletettuna merkit ja niihin
+     * @param mapOfKeys Map, johon on talletettuna merkit ja niihin
      * liittyvät määrät.
      * @param keys HashMapin sisältämät merkit String-muodossa.
      */
-    public Keyboard(HashMap<Character, Integer> mapOfKeys, String keys) {
+    public Keyboard(Map<Character, Integer> mapOfKeys, String keys) {
         this.mapOfKeys = mapOfKeys;
         this.keys = keys;
         this.placementMatrix = new char[6][21];
