@@ -2070,7 +2070,7 @@ public class NewUI extends javax.swing.JFrame {
 
     // luo uudet buttonit kirjaintilaan, pitää laskea myös määrä = taustaväri
     private void CreateKeyButtons(Keyboard keyboard) {
-        // LayOut pitää vaihtaa
+        // LayOut pitää vaihtaa 
         KeysPanel.setLayout(new javax.swing.BoxLayout(KeysPanel, BoxLayout.X_AXIS));
         if (!keyboard.getMapOfKeys().isEmpty()) {
             for (char key : keyboard.getMapOfKeys().keySet()) {
