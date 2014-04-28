@@ -56,7 +56,7 @@ public class KeyboardGenerator {
      * @return  Tyhjä Keyboard-olio.
      */
     public Keyboard createEmptyKeyboard() {
-        Keyboard keyboard = new Keyboard(mapOfKeys, keys);
+        Keyboard keyboard = new Keyboard(mapOfKeys, keys, 0);
         return keyboard;
     }
 
@@ -68,16 +68,18 @@ public class KeyboardGenerator {
      */
     public Keyboard countInstancesOfKeysAndCreateKeyboard() throws FileNotFoundException {
         Scanner scanner = new Scanner(this.file);
+        int amountOfKeysInFile = 0;
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             for (int i = 0; i < line.length(); i++) {
+                amountOfKeysInFile++;
                 if (this.mapOfKeys.containsKey(line.charAt(i))) {
                     this.mapOfKeys.put(line.charAt(i), this.mapOfKeys.get(line.charAt(i)) + 1);
                 }
             }
         }
         scanner.close();
-        Keyboard keyboard = new Keyboard(this.mapOfKeys, keys);
+        Keyboard keyboard = new Keyboard(this.mapOfKeys, keys, amountOfKeysInFile);
         return keyboard;
     }
 }

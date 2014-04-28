@@ -6,9 +6,13 @@
 package userinterface;
 
 import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JScrollBar;
 import javax.swing.JToggleButton;
 import logic.Keyboard;
 import logic.KeyboardGenerator;
@@ -42,8 +46,7 @@ public class NewUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         KeySetArea = new javax.swing.JTextArea();
         SetCustomKeyset = new javax.swing.JToggleButton();
-        CreatButton = new javax.swing.JButton();
-        KeysPanel = new javax.swing.JPanel();
+        CreateButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
@@ -152,6 +155,8 @@ public class NewUI extends javax.swing.JFrame {
         jPanel110 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        KeyAreaScrollPane = new javax.swing.JScrollPane();
+        KeysPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("KeyboardOptimizer");
@@ -192,28 +197,23 @@ public class NewUI extends javax.swing.JFrame {
             }
         });
 
-        CreatButton.setText("Create");
-        CreatButton.setToolTipText("");
-        CreatButton.addActionListener(new java.awt.event.ActionListener() {
+        CreateButton.setText("Create");
+        CreateButton.setToolTipText("");
+        CreateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CreateButtonActionPerformed(evt);
             }
         });
 
-        KeysPanel.setBackground(new java.awt.Color(160, 160, 160));
-
-        javax.swing.GroupLayout KeysPanelLayout = new javax.swing.GroupLayout(KeysPanel);
-        KeysPanel.setLayout(KeysPanelLayout);
-        KeysPanelLayout.setHorizontalGroup(
-            KeysPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        KeysPanelLayout.setVerticalGroup(
-            KeysPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 83, Short.MAX_VALUE)
-        );
-
         jPanel2.setBackground(new java.awt.Color(93, 91, 90));
+
+        jPanel3.setLayout(new FlowLayout());
+        jPanel3.setToolTipText("");
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -227,6 +227,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel8.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -253,6 +258,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel9.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel9MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -526,6 +536,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel30.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel30MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -539,6 +554,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel31.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel31.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel31MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
@@ -552,6 +572,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel32.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel32.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel32MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
         jPanel32.setLayout(jPanel32Layout);
@@ -565,6 +590,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel33.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel33.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel33MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
@@ -578,6 +608,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel34.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel34.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel34MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -591,6 +626,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel35.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel35.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel35MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
@@ -604,6 +644,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel36.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel36.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel36MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
         jPanel36.setLayout(jPanel36Layout);
@@ -617,6 +662,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel37.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel37MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
@@ -630,6 +680,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel38.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel38.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel38MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
@@ -643,6 +698,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel39.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel39.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel39MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
@@ -656,6 +716,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel40.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel40.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel40MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
@@ -669,6 +734,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel41.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel41MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
@@ -682,6 +752,11 @@ public class NewUI extends javax.swing.JFrame {
         );
 
         jPanel42.setPreferredSize(new java.awt.Dimension(30, 30));
+        jPanel42.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel42MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
@@ -1967,31 +2042,49 @@ public class NewUI extends javax.swing.JFrame {
 
         jLabel4.setText("Keyset -kenttään voidaan asettaa luettavat merkit, jos halutaan käyttää muita kuin suomalaisia aakkosia. Tällöin Use Custom Keyset-nappi pitää olla painettuna.");
 
+        KeyAreaScrollPane.setAutoscrolls(true);
+
+        KeysPanel.setBackground(new java.awt.Color(160, 160, 160));
+
+        javax.swing.GroupLayout KeysPanelLayout = new javax.swing.GroupLayout(KeysPanel);
+        KeysPanel.setLayout(KeysPanelLayout);
+        KeysPanelLayout.setHorizontalGroup(
+            KeysPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 940, Short.MAX_VALUE)
+        );
+        KeysPanelLayout.setVerticalGroup(
+            KeysPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        KeyAreaScrollPane.setViewportView(KeysPanel);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(KeysPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addComponent(SetCustomKeyset)
-                    .addComponent(CreatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(69, 69, 69))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3))
-                .addGap(0, 38, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(KeyAreaScrollPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addComponent(SetCustomKeyset)
+                            .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(69, 69, 69))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2008,25 +2101,23 @@ public class NewUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CreatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(KeysPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGap(29, 29, 29)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel2)
+                        .addGap(98, 98, 98)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(KeyAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(53, 53, 53)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // vois ehkä laittaa Swing Windows -> File Chooser FilePathin tilalle
-
     private void SetCustomKeysetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SetCustomKeysetActionPerformed
         if (SetCustomKeyset.isSelected()) {
             KeySetArea.setEnabled(true);
@@ -2049,12 +2140,10 @@ public class NewUI extends javax.swing.JFrame {
             if (!SetCustomKeyset.isSelected()) {
                 KeyboardGenerator KBGen = new KeyboardGenerator(FilePathArea.getText());
                 Keyboard keyboard = KBGen.countInstancesOfKeysAndCreateKeyboard();
-                System.out.println(keyboard);
                 CreateKeyButtons(keyboard);
             } else {
                 KeyboardGenerator KBGen = new KeyboardGenerator(FilePathArea.getText(), KeySetArea.getText());
                 Keyboard keyboard = KBGen.countInstancesOfKeysAndCreateKeyboard();
-                System.out.println(keyboard);
                 CreateKeyButtons(keyboard);
             }
         } catch (Exception e) {
@@ -2062,85 +2151,213 @@ public class NewUI extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }//GEN-LAST:event_CreateButtonActionPerformed
-    // laskee merkkien määrän, jos < x, niin koko on nxm, jos >x koko on 2nx2m, jos >y koko on 3nx3m tjsp
-    // kutsuu jokaiselle merkille CreateKeyButtonsia tietyllä koolla
-    private void CountAmountOfKeys(Keyboard keyboard) {
 
+    private void KeyboardPanelButtonPressed(java.awt.event.ActionEvent evt, JPanel jPanel) {
+        jPanel.removeAll();
+        jPanel.repaint();
+    }
+
+    private void OneOfTheKeyButtonsPressed(java.awt.event.ActionEvent evt, boolean isButtonSelected) {
+        if (isButtonSelected) {
+            for (Component comp : KeysPanel.getComponents()) {
+                comp.setEnabled(false);
+            }
+        }
+    }
+
+    private void KeyboardPanelPressed(final JPanel jPanel) {
+        for (Component comp : KeysPanel.getComponents()) {
+            if (comp instanceof JToggleButton) {
+                JToggleButton keyButton = (JToggleButton) comp;
+                if (keyButton.isSelected()) {
+                    jPanel.setLayout(new FlowLayout());
+                    final JButton keyboardPanelButton = new JButton(keyButton.getText());
+                    keyboardPanelButton.setBackground(comp.getBackground());
+                    keyboardPanelButton.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                            KeyboardPanelButtonPressed(evt, jPanel);
+                        }
+                    });
+                    jPanel.add(keyboardPanelButton);
+                    jPanel.validate();
+                    jPanel.repaint();
+                    keyButton.setSelected(false);
+                }
+            }
+            comp.setEnabled(true);
+        }
     }
 
     // luo uudet buttonit kirjaintilaan, pitää laskea myös määrä = taustaväri
     private void CreateKeyButtons(Keyboard keyboard) {
-        // LayOut pitää vaihtaa 
-        KeysPanel.setLayout(new javax.swing.BoxLayout(KeysPanel, BoxLayout.X_AXIS));
+        KeysPanel.removeAll();
+
+//        JScrollBar scrollBar = new JScrollBar();
+//        scrollBar.setPreferredSize(new Dimension(10, KeysPanel.getHeight()));
+//        KeysPanel.add(scrollBar);
+//        
+        KeysPanel.setLayout(new FlowLayout());
+//        KeysPanel.setLayout(new BoxLayout(KeysPanel, BoxLayout.Y_AXIS));
+
         if (!keyboard.getMapOfKeys().isEmpty()) {
             for (char key : keyboard.getMapOfKeys().keySet()) {
                 // "" + key
-                JToggleButton keyButton = new javax.swing.JToggleButton();
+                final JToggleButton keyButton = new javax.swing.JToggleButton();
                 keyButton.setText(key + "");
-                int[] RGB = selectColourForButton(keyboard, key);
-                Color color = new Color(RGB[0], RGB[1], RGB[2]);
+//                int[] RGB = selectColourForButton(keyboard, key);
+//                Color color = new Color(RGB[0], RGB[1], RGB[2]);
+                Color color = selectColourForButton(keyboard, key);
                 keyButton.setBackground(color);
+                keyButton.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        OneOfTheKeyButtonsPressed(evt, keyButton.isSelected());
+                    }
+                });
                 KeysPanel.add(keyButton);
                 KeysPanel.validate();
             }
         }
-        System.out.println(keyboard.getAmountOfAllKeys());
         KeysPanel.repaint();
     }
 
-    // keyboard.getAmountOfAllKeys ei toimi, sillä haluis KAIKKIEN merkkien määrän, ei vaan haettujen
-    private int[] selectColourForButton(Keyboard keyboard, char key) {
-        int[] RGB = new int[3];
+//  private int[] selectColourForButton(Keyboard keyboard, char key)    
+    private Color selectColourForButton(Keyboard keyboard, char key) {
+//        int[] RGB = new int[3];
         int all = keyboard.getAmountOfAllKeys();
         int keyAmount = keyboard.getAmount(key);
-        System.out.println(key + " " + keyAmount);
-        if ((double)keyAmount / all < 0.1) {
-            RGB[0] = 2;
-            RGB[1] = 110;
-            RGB[2] = 58;
-        } else if ((double)keyAmount / all < 0.2) {
-            RGB[0] = 4;
-            RGB[1] = 180;
-            RGB[2] = 37;
-        } else if ((double)keyAmount / all < 0.3) {
-            RGB[0] = 6;
-            RGB[1] = 244;
-            RGB[2] = 50;
-        } else if ((double)keyAmount / all < 0.4) {
-            RGB[0] = 185;
-            RGB[1] = 244;
-            RGB[2] = 5;
-        } else if ((double)keyAmount / all < 0.5) {
-            RGB[0] = 244;
-            RGB[1] = 244;
-            RGB[2] = 8;
-        } else if ((double)keyAmount / all < 0.6) {
-            RGB[0] = 244;
-            RGB[1] = 139;
-            RGB[2] = 9;
-        } else if ((double)keyAmount / all < 0.7) {
-            RGB[0] = 244;
-            RGB[1] = 79;
-            RGB[2] = 2;
-        } else if ((double)keyAmount / all < 0.8) {
-            RGB[0] = 205;
-            RGB[1] = 4;
-            RGB[2] = 4;
-        } else if ((double)keyAmount / all < 0.9) {
-            RGB[0] = 132;
-            RGB[1] = 2;
-            RGB[2] = 2;
+        Color rgb = new Color(0, 190, 255);
+        if ((double) keyAmount / all < 0.1) {
+            return rgb;
+        } else if ((double) keyAmount / all < 0.2) {
+            return rgb.darker();
+        } else if ((double) keyAmount / all < 0.3) {
+            return rgb.darker().darker();
+        } else if ((double) keyAmount / all < 0.4) {
+            return rgb.darker().darker().darker();
+        } else if ((double) keyAmount / all < 0.5) {
+            return rgb.darker().darker().darker().darker();
+        } else if ((double) keyAmount / all < 0.6) {
+            return rgb.darker().darker().darker().darker().darker();
+        } else if ((double) keyAmount / all < 0.7) {
+            return rgb.darker().darker().darker().darker().darker().darker();
+        } else if ((double) keyAmount / all < 0.8) {
+            return rgb.darker().darker().darker().darker().darker().darker().darker();
+        } else if ((double) keyAmount / all < 0.9) {
+            return rgb.darker().darker().darker().darker().darker().darker().darker().darker();
         } else {
-            RGB[0] = 54;
-            RGB[1] = 0;
-            RGB[2] = 0;
+            return rgb.darker().darker().darker().darker().darker().darker().darker().darker().darker();
         }
-        return RGB;
+//        if ((double)keyAmount / all < 0.1) {
+//            RGB[0] = 2;
+//            RGB[1] = 110;
+//            RGB[2] = 58;
+//        } else if ((double)keyAmount / all < 0.2) {
+//            RGB[0] = 4;
+//            RGB[1] = 180;
+//            RGB[2] = 37;
+//        } else if ((double)keyAmount / all < 0.3) {
+//            RGB[0] = 6;
+//            RGB[1] = 244;
+//            RGB[2] = 50;
+//        } else if ((double)keyAmount / all < 0.4) {
+//            RGB[0] = 185;
+//            RGB[1] = 244;
+//            RGB[2] = 5;
+//        } else if ((double)keyAmount / all < 0.5) {
+//            RGB[0] = 244;
+//            RGB[1] = 244;
+//            RGB[2] = 8;
+//        } else if ((double)keyAmount / all < 0.6) {
+//            RGB[0] = 244;
+//            RGB[1] = 139;
+//            RGB[2] = 9;
+//        } else if ((double)keyAmount / all < 0.7) {
+//            RGB[0] = 244;
+//            RGB[1] = 79;
+//            RGB[2] = 2;
+//        } else if ((double)keyAmount / all < 0.8) {
+//            RGB[0] = 205;
+//            RGB[1] = 4;
+//            RGB[2] = 4;
+//        } else if ((double)keyAmount / all < 0.9) {
+//            RGB[0] = 132;
+//            RGB[1] = 2;
+//            RGB[2] = 2;
+//        } else {
+//            RGB[0] = 54;
+//            RGB[1] = 0;
+//            RGB[2] = 0;
+//        }
+//        return RGB;
     }
 
     private void SetCustomKeysetStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_SetCustomKeysetStateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_SetCustomKeysetStateChanged
+
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        KeyboardPanelPressed(jPanel3);
+    }//GEN-LAST:event_jPanel3MouseClicked
+
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+        KeyboardPanelPressed(jPanel8);
+    }//GEN-LAST:event_jPanel8MouseClicked
+
+    private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
+        KeyboardPanelPressed(jPanel9);
+    }//GEN-LAST:event_jPanel9MouseClicked
+
+    private void jPanel39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel39MouseClicked
+        KeyboardPanelPressed(jPanel39);
+    }//GEN-LAST:event_jPanel39MouseClicked
+
+    private void jPanel38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel38MouseClicked
+        KeyboardPanelPressed(jPanel38);
+    }//GEN-LAST:event_jPanel38MouseClicked
+
+    private void jPanel34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel34MouseClicked
+        KeyboardPanelPressed(jPanel40);
+    }//GEN-LAST:event_jPanel34MouseClicked
+
+    private void jPanel36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel36MouseClicked
+        KeyboardPanelPressed(jPanel36);
+    }//GEN-LAST:event_jPanel36MouseClicked
+
+    private void jPanel35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel35MouseClicked
+        KeyboardPanelPressed(jPanel35);
+    }//GEN-LAST:event_jPanel35MouseClicked
+
+    private void jPanel37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel37MouseClicked
+        KeyboardPanelPressed(jPanel37);
+    }//GEN-LAST:event_jPanel37MouseClicked
+
+    private void jPanel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel33MouseClicked
+        KeyboardPanelPressed(jPanel33);
+    }//GEN-LAST:event_jPanel33MouseClicked
+
+    private void jPanel32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel32MouseClicked
+        KeyboardPanelPressed(jPanel32);
+    }//GEN-LAST:event_jPanel32MouseClicked
+
+    private void jPanel31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel31MouseClicked
+        KeyboardPanelPressed(jPanel31);
+    }//GEN-LAST:event_jPanel31MouseClicked
+
+    private void jPanel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel30MouseClicked
+        KeyboardPanelPressed(jPanel30);
+    }//GEN-LAST:event_jPanel30MouseClicked
+
+    private void jPanel40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel40MouseClicked
+        KeyboardPanelPressed(jPanel40);
+    }//GEN-LAST:event_jPanel40MouseClicked
+
+    private void jPanel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel41MouseClicked
+        KeyboardPanelPressed(jPanel41);
+    }//GEN-LAST:event_jPanel41MouseClicked
+
+    private void jPanel42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel42MouseClicked
+        KeyboardPanelPressed(jPanel42);
+    }//GEN-LAST:event_jPanel42MouseClicked
 
     /**
      * @param args the command line arguments
@@ -2177,8 +2394,9 @@ public class NewUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CreatButton;
+    private javax.swing.JButton CreateButton;
     private javax.swing.JTextArea FilePathArea;
+    private javax.swing.JScrollPane KeyAreaScrollPane;
     private javax.swing.JTextArea KeySetArea;
     private javax.swing.JPanel KeysPanel;
     private javax.swing.JToggleButton SetCustomKeyset;

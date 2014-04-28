@@ -21,10 +21,11 @@ public class Keyboard {
      * liittyvät määrät.
      * @param keys HashMapin sisältämät merkit String-muodossa.
      */
-    public Keyboard(Map<Character, Integer> mapOfKeys, String keys) {
+    public Keyboard(Map<Character, Integer> mapOfKeys, String keys, int amountOfKeysInFile) {
         this.mapOfKeys = mapOfKeys;
         this.keys = keys;
         this.placementMatrix = new char[6][21];
+        this.amountOfKeys = amountOfKeysInFile;
         for (int i = 0; i < 6; i++) {
             int k = 0;
             if (i == 1 || i == 2) {
@@ -40,11 +41,15 @@ public class Keyboard {
                 this.placementMatrix[i][j] = ' ';
             }
         }
-        for (char key : mapOfKeys.keySet()) {
-            this.amountOfKeys += mapOfKeys.get(key);
-        }
+//        for (char key : mapOfKeys.keySet()) {
+//            this.amountOfKeys += mapOfKeys.get(key);
+//        }
     }
 
+//    public void setAmountOfAllKeys(int amountOfKeysInFile) {
+//        this.amountOfKeys = amountOfKeysInFile;
+//    }
+    
     public int getAmountOfAllKeys() {        
         return this.amountOfKeys;
     }
