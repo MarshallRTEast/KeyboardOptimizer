@@ -1,0 +1,7 @@
+Testifilu1: 5xA - 8.3%, 7xB - 11.6%, 9xC - 15%, 11xD - 18.3%, 13xE - 21.6%, 15xF - 25%
+Testifilu2: currently not working
+Testifilu3: 5xA - 50%, 2xB - 20%
+Testifilu4: 1xA - 0.5%, 2xB - 1%, 4xC - 2%, 3xD - 1.5%, 20xE - 10%, 60xF - 30%, 110xG - 55%
+Testifilu5: 2xA - 1%, 4xB - 2%, 6xC - 3%, 8xD - 4%, 10xE - 5%, 12xF - 6%, 14xG - 7%, 16xH - 8%,
+		18xI - 9%, 20xJ - 10%, 90xK - 45%
+Testifilu6: 2xA - 50%, 1xB - 25%, 1xC - 25% ------ rivinvaihtotesti
