@@ -13,9 +13,5 @@ public class Main {
                 new UserInterface().setVisible(true);
             }
         });
-
-//        UserInterface UI = new UserInterface();
-//        SwingUtilities.invokeLater(UI);
-
     }
 }

@@ -1,5 +1,356 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * To change this license header, choose License Headers in Project Prope
+
+            @Override
+            public void draw(Shape shape) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public boolean drawImage(Image image, AffineTransform at, ImageObserver io) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawImage(BufferedImage bi, BufferedImageOp bio, int i, int i1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawRenderedImage(RenderedImage ri, AffineTransform at) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawRenderableImage(RenderableImage ri, AffineTransform at) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawString(String string, int i, int i1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawString(String string, float f, float f1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawString(AttributedCharacterIterator aci, int i, int i1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawString(AttributedCharacterIterator aci, float f, float f1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawGlyphVector(GlyphVector gv, float f, float f1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void fill(Shape shape) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public boolean hit(Rectangle rctngl, Shape shape, boolean bln) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public GraphicsConfiguration getDeviceConfiguration() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setComposite(Composite cmpst) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setPaint(Paint paint) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setStroke(Stroke stroke) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setRenderingHint(Key key, Object o) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Object getRenderingHint(Key key) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setRenderingHints(Map<?, ?> map) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void addRenderingHints(Map<?, ?> map) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public RenderingHints getRenderingHints() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void translate(int i, int i1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void translate(double d, double d1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void rotate(double d) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void rotate(double d, double d1, double d2) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void scale(double d, double d1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void shear(double d, double d1) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void transform(AffineTransform at) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setTransform(AffineTransform at) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public AffineTransform getTransform() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Paint getPaint() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Composite getComposite() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setBackground(Color color) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Color getBackground() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Stroke getStroke() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void clip(Shape shape) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public FontRenderContext getFontRenderContext() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Graphics create() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Color getColor() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setColor(Color color) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setPaintMode() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setXORMode(Color color) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Font getFont() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setFont(Font font) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public FontMetrics getFontMetrics(Font font) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Rectangle getClipBounds() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void clipRect(int i, int i1, int i2, int i3) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setClip(int i, int i1, int i2, int i3) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public Shape getClip() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void setClip(Shape shape) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void copyArea(int i, int i1, int i2, int i3, int i4, int i5) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawLine(int i, int i1, int i2, int i3) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void fillRect(int i, int i1, int i2, int i3) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void clearRect(int i, int i1, int i2, int i3) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawRoundRect(int i, int i1, int i2, int i3, int i4, int i5) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void fillRoundRect(int i, int i1, int i2, int i3, int i4, int i5) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawOval(int i, int i1, int i2, int i3) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void fillOval(int i, int i1, int i2, int i3) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawArc(int i, int i1, int i2, int i3, int i4, int i5) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void fillArc(int i, int i1, int i2, int i3, int i4, int i5) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawPolyline(int[] ints, int[] ints1, int i) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void drawPolygon(int[] ints, int[] ints1, int i) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void fillPolygon(int[] ints, int[] ints1, int i) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public boolean drawImage(Image image, int i, int i1, ImageObserver io) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public boolean drawImage(Image image, int i, int i1, int i2, int i3, ImageObserver io) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public boolean drawImage(Image image, int i, int i1, Color color, ImageObserver io) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public boolean drawImage(Image image, int i, int i1, int i2, int i3, Color color, ImageObserver io) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public boolean drawImage(Image image, int i, int i1, int i2, int i3, int i4, int i5, int i6, int i7, ImageObserver io) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public boolean drawImage(Image image, int i, int i1, int i2, int i3, int i4, int i5, int i6, int i7, Color color, ImageObserver io) {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+
+            @Override
+            public void dispose() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+        }ties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -7,14 +358,12 @@ package userinterface;
 
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.util.ArrayList;
 import java.util.Arrays;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
 import javax.swing.JToggleButton;
 import logic.Keyboard;
 import logic.KeyboardGenerator;
@@ -157,17 +506,22 @@ public class UserInterface extends javax.swing.JFrame {
         jPanel108 = new javax.swing.JPanel();
         jPanel109 = new javax.swing.JPanel();
         jPanel110 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        chooseFileGuide = new javax.swing.JLabel();
+        chooseKeysetGuide = new javax.swing.JLabel();
         KeyAreaScrollPane = new javax.swing.JScrollPane();
         KeysPanel = new javax.swing.JPanel();
         ClearKeysButton = new javax.swing.JButton();
+        FileChooserButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        percentageLabel = new javax.swing.JLabel();
+        percentageGradientExplanation = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("KeyboardOptimizer");
-        setBackground(new java.awt.Color(142, 196, 206));
+        setBackground(new java.awt.Color(116, 150, 152));
         setBounds(new java.awt.Rectangle(50, 0, 1200, 620));
         setName("Keyboard Optimizer"); // NOI18N
+        setResizable(false);
 
         jLabel1.setText("Keyset:");
 
@@ -175,7 +529,6 @@ public class UserInterface extends javax.swing.JFrame {
 
         FilePathArea.setColumns(20);
         FilePathArea.setRows(5);
-        FilePathArea.setText("src/Testitiedostot/Testifilu1.txt");
         jScrollPane1.setViewportView(FilePathArea);
 
         KeySetArea.setColumns(20);
@@ -2266,7 +2619,7 @@ public class UserInterface extends javax.swing.JFrame {
                         .addComponent(jPanel107, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel108, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(KeyboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(KeyboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(KeyboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2488,13 +2841,14 @@ public class UserInterface extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jLabel3.setText("File Path -kenttään asetetaan luettavan tiedoston tiedostopolku muodossa ylikansio/alakansio/tiedostonimi.tiedostomuoto.");
+        chooseFileGuide.setText("Luettavan tiedoston voi valita joko Choose File -napilla tai kirjoittamalla tiedostoreitti File path -alueeseen.");
 
-        jLabel4.setText("Keyset -kenttään voidaan asettaa luettavat merkit, jos halutaan käyttää muita kuin suomalaisia aakkosia. Tällöin Use Custom Keyset-nappi pitää olla painettuna.");
+        chooseKeysetGuide.setText("Keyset -kenttään voidaan asettaa luettavat merkit, jos halutaan käyttää muita kuin suomalaisia aakkosia. Tällöin Use Custom Keyset-nappi pitää olla painettuna.");
 
         KeyAreaScrollPane.setAutoscrolls(true);
 
         KeysPanel.setBackground(new java.awt.Color(160, 160, 160));
+        KeysPanel.setAutoscrolls(true);
 
         javax.swing.GroupLayout KeysPanelLayout = new javax.swing.GroupLayout(KeysPanel);
         KeysPanel.setLayout(KeysPanelLayout);
@@ -2516,6 +2870,19 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
+        FileChooserButton.setText("Choose File");
+        FileChooserButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FileChooserButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Hanskat\\KeyboardOptimizer\\KeyboardOptimizer\\src\\gradient.jpg")); // NOI18N
+
+        percentageLabel.setText("%    0           5              10                                                         30                                                      50                                                                                                                                                     100");
+
+        percentageGradientExplanation.setText("Alla merkkien prosentuaalisiin määriin liittyvät värit, jakauma on epätasainen, koska pienet määrät tiettyä merkkiä ovat yleisempiä.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -2524,25 +2891,32 @@ public class UserInterface extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(percentageGradientExplanation, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(KeyAreaScrollPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                .addComponent(KeyboardPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(ClearKeysButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(chooseFileGuide, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(KeyAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(KeyboardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ClearKeysButton)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 921, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                                .addComponent(jLabel2)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                            .addComponent(jLabel2)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(SetCustomKeyset)
-                            .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(69, 69, 69))))
+                            .addComponent(FileChooserButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CreateButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(69, 69, 69))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(chooseKeysetGuide)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(percentageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 955, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2550,28 +2924,36 @@ public class UserInterface extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
+                        .addComponent(FileChooserButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel1)
                         .addGap(4, 4, 4)
                         .addComponent(SetCustomKeyset)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(98, 98, 98)
+                        .addGap(112, 112, 112)
                         .addComponent(KeyboardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(KeyAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ClearKeysButton)
-                .addGap(24, 24, 24)
-                .addComponent(jLabel3)
+                .addGap(9, 9, 9)
+                .addComponent(chooseFileGuide)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(chooseKeysetGuide)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(percentageGradientExplanation)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(percentageLabel)
+                .addGap(1, 1, 1)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         pack();
@@ -2696,30 +3078,30 @@ public class UserInterface extends javax.swing.JFrame {
         int[] RGB = new int[3];
         int all = keyboard.getAmountOfAllKeys();
         int keyAmount = keyboard.getAmount(key);
-        double percentageOfKeyInFile = 100 * (double)keyAmount / all;
+        double percentageOfKeyInFile = 100 * (double) keyAmount / all;
         if (keyAmount == 0) {
             return new Color(255, 255, 255);
         }
         if (percentageOfKeyInFile <= 5.0) {
-            RGB[0] = (int)Math.floor(percentageOfKeyInFile / 0.02);
+            RGB[0] = (int) Math.floor(percentageOfKeyInFile / 0.02);
             RGB[1] = 255;
             RGB[2] = 0;
-        } else if (percentageOfKeyInFile <= 10.0){
+        } else if (percentageOfKeyInFile <= 10.0) {
             RGB[0] = 255;
-            RGB[1] = 255 - (int)Math.floor((percentageOfKeyInFile - 5) / 0.02);
+            RGB[1] = 255 - (int) Math.floor((percentageOfKeyInFile - 5) / 0.02);
             RGB[2] = 0;
-        } else if (percentageOfKeyInFile <= 30.0){
+        } else if (percentageOfKeyInFile <= 30.0) {
             RGB[0] = 255;
             RGB[1] = 0;
-            RGB[2] = (int)Math.floor((percentageOfKeyInFile - 10) / 0.08);
+            RGB[2] = (int) Math.floor((percentageOfKeyInFile - 10) / 0.08);
         } else if (percentageOfKeyInFile <= 50.0) {
-            RGB[0] = 255 - (int)Math.floor((percentageOfKeyInFile - 30) / 0.08);
+            RGB[0] = 255 - (int) Math.floor((percentageOfKeyInFile - 30) / 0.08);
             RGB[1] = 1;
             RGB[2] = 255;
         } else {
             RGB[0] = 0;
             RGB[1] = 1;
-            RGB[2] = 255 - (int)Math.floor((percentageOfKeyInFile - 50) / 0.2);
+            RGB[2] = 255 - (int) Math.floor((percentageOfKeyInFile - 50) / 0.2);
         }
         Color rgb = new Color(RGB[0], RGB[1], RGB[2]);
         System.out.println(key + ":" + keyAmount + ":" + percentageOfKeyInFile);
@@ -3162,6 +3544,14 @@ public class UserInterface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ClearKeysButtonActionPerformed
 
+    private void FileChooserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FileChooserButtonActionPerformed
+        JFileChooser fileChooser = new JFileChooser("src/Testitiedostot");
+        fileChooser.showOpenDialog(this);
+        if (fileChooser.getSelectedFile() != null) {
+            FilePathArea.setText(fileChooser.getSelectedFile().getPath());
+        }
+    }//GEN-LAST:event_FileChooserButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3199,16 +3589,18 @@ public class UserInterface extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ClearKeysButton;
     private javax.swing.JButton CreateButton;
+    private javax.swing.JButton FileChooserButton;
     private javax.swing.JTextArea FilePathArea;
     private javax.swing.JScrollPane KeyAreaScrollPane;
     private javax.swing.JTextArea KeySetArea;
     private javax.swing.JPanel KeyboardPanel;
     private javax.swing.JPanel KeysPanel;
     private javax.swing.JToggleButton SetCustomKeyset;
+    private javax.swing.JLabel chooseFileGuide;
+    private javax.swing.JLabel chooseKeysetGuide;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel100;
     private javax.swing.JPanel jPanel101;
@@ -3316,5 +3708,7 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel99;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel percentageGradientExplanation;
+    private javax.swing.JLabel percentageLabel;
     // End of variables declaration//GEN-END:variables
 }

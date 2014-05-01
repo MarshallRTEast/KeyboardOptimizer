@@ -32,7 +32,7 @@ public class KeyboardTest {
         for (int i = 0; i < keys.length(); i++) {
             mapOfKeys.put(keys.charAt(i), 5 + 2 * i);
         }
-        defaultKeyboard = new Keyboard(mapOfKeys, keys);
+        defaultKeyboard = new Keyboard(mapOfKeys, keys, 60);
     }
 
     @After
@@ -75,14 +75,6 @@ public class KeyboardTest {
         defaultKeyboard.setOneKeyAmountUsingChar('A', 20);
         assertEquals(20, defaultKeyboard.getAmount('A'));
     }
-
-//    @Test
-//    public void matriisinGettausToimii() {
-//        char[][] matriisi = {{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-//            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-//            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',0,0,0,0}};
-//        assertEquals(matriisi, defaultKeyboard.getPlacementMatrix());
-//    }
 
     @Test
     public void matriisiinLisaysToimii() {
