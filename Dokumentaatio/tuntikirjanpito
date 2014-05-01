@@ -11,32 +11,32 @@ Toinen viikko
 
   18.3
   ~1h:    Gitin käytön selvittämistä IRC:n avustuksella, ykkösviikon tehtävien uudelleenyrittämistä
-  2h:     Ensimmäisten koodinpätkien teko NetBeansissa, ensimmäinen luokka pitkällä, muut vasta alussa
-  1,5h:   Testien tekoa, KeyboardGeneratorin miettimistä ja nopeasti määrittelyvaiheen luokkakaavio
+  2h:     Ensimmäisten koodinpätkien teko NetBeansissa, ensimmäinen luokka pitkällä, muut vasta alus.sa.
+  1,5h:   Testien tekoa, KeyboardGeneratorin miettimistä ja nopeasti määrittelyvaiheen luokkakaavio.
   20.3
-  ~1h:    Lisää testejä, KeyboardGeneratorin aloittelua
+  ~1h:    Lisää testejä, KeyboardGeneratorin aloittelua.
   
 Yhteensä 3,5h
   
 Kolmas viikko
 
   25.3
-  ~1,5h:  Konstruktorien muuttamista Keyboard-luokassa, KeyboardGeneratorin työstämistä
+  ~1,5h:  Konstruktorien muuttamista Keyboard-luokassa, KeyboardGeneratorin työstämistä.
   26.3
-  ~1,5h:  Testien uudelleentyöstö Keyboard ja KeyboardGenerator -luokkiin. Paikkamatriisin aloittelua
+  ~1,5h:  Testien uudelleentyöstö Keyboard ja KeyboardGenerator -luokkiin. Paikkamatriisin aloittelua.
   27.3
-  1h:     Matriisinkäsittelymetodeita Keyboardiin
+  1h:     Matriisinkäsittelymetodeita Keyboardiin.
 
 Yhteensä 4h 
 
 Neljäs viikko
 
   31.3
-  ~3h:    Testien päivitys Keyboardiin ja KeyboardGeneratoriin, käyttöliittymän luonnin aloittaminen
+  ~3h:    Testien päivitys Keyboardiin ja KeyboardGeneratoriin, käyttöliittymän luonnin aloittaminen.
   1.4
-  ~2h:    Eeppinen kamppailu Pit-raporttien ja kansiorakenteen kanssa
+  ~2h:    Eeppinen kamppailu Pit-raporttien ja kansiorakenteen kanssa.
   2.4
-  2h:     Käyttöliittymän uudelleenaloitus GUI-builderilla
+  2h:     Käyttöliittymän uudelleenaloitus GUI-builderilla.
   3.4
   2h:      Käyttöliittymän jatkoa, ensimmäinen sekvenssikaavio, JavaDocin teko.
   
@@ -51,6 +51,11 @@ Loput viidennestä viikosta, kuudes ja seitsemäs viikko
   
 Kahdeksas viikko
 
-  29.4
+  28.4
   5h:     Käyttöliittymän hurja työstörykäisy.
+  39.4
+  4h:     Ohjelma laitettu käyttökuntoon, värihifistelyä tehty paljon.
+  1.5
+  2h:     Hifistelyä, File Chooser lisätty, samoin prosenttigradientti.
+  
 
