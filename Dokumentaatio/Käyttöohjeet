@@ -1,0 +1,35 @@
+Käyttöohjeet KeyboardOptimizerille
+
+Ajettaessa koodi avautuu käyttäjälle käyttöliittymä, jossa on näkyvillä näppäimistö, nappeja, kaksi tekstikenttää
+ja oikein hieno värigradientti.
+
+Oikeassa ylänurkassa olevalla Choose File -napilla avautuu tiedostonvalintaikkuna, josta voi valita luettavan tiedoston.
+Vaihtoehtoisesti tiedoston tiedostopolun voi kirjoittaa File path -tekstikenttään.
+
+Jos tiedostosta haluaa lukea vain isoja aakkosia (poislukien ääkköset), voi Use Custom Keysetin unohtaa. Jos sensijaan
+haluaa lukea omavalitsemiaan merkkejä voi Use Custom Keyset -näppäimen painaa pohjaan ja kirjoittaa haluamansa merkit
+sen alla olevaan tekstikenttään.*
+
+Create -nappi lukee valitusta tiedostosta valitut merkit ja luo Choose File -napin vasemmalla puolella olevaan kenttään
+näistä toiminnalliset napit.
+
+Kirjainnapin painaminen estää muiden kirjainnappien painamisen. Tällöin voidaan valittu nappi siirtää näppäimistöön
+painamalla mitä tahansa näppäintä käyttöliittymässä olevasta näppäimistöstä hiirellä. Tällöin nappi siirtyy valittuun
+paikkaan. Lisäksi napin käyttö estyy kirjainnäppäin -listasta, jotta samaa merkkiä ei voi laittaa näppäimistöön useaa.
+kertaa.
+
+Napit saa irrotettua näppäimistöstä joko painamalla näppäintä käyttöliittymässä olevasta näppäimistöstä tai tyhjentämällä
+koko näppäimistön Clear Keys -napilla.
+
+Käyttöliittymän alareunassa on viitettä antava väriliukuma nappien eri prosentuaalisista väreistä.
+
+*HUOM! Ohjelma ei tunnista kaksibittisiä merkkejä tiedostoista, joten jos luettava tiedosto sisältää yhdenkään kaksibittisen
+merkin, ei ohjelma osaa laskea merkkien prosentteja oikein.
+Kaksibittisiä merkkejä ovat muunmuassa ÅÖÄåöä¤`. 
+
+*HUOM! Alue johon kirjainnapit luodaan ei tällähetkellä scrollaa oikein. Tämän takia jos yrittää lukea tiedostosta yli 60
+merkkiä, eivät kuudenkymmenen yli menevät merkit mahdu enää annettuun tilaan.
+
+HUOM! Jostain syystä kirjainnappien alue pienenee hyvin pieneksi jos sinne on asetettuna näppäimiä ja ohjelman pienentää
+ylänurkan _ -napista. Aluetta ei saa enää tavallisen kokoiseksi ilman ohjelman uudelleenkäynnistystä, joten tätä kannattaa
+välttää.
