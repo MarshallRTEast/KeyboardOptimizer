@@ -22,3 +22,10 @@ Toiminnot:
   - Luotujen näppäimistöjen tallentaminen
   - Automaattinen näppäimistön luoja -nappi
   
+
+Rakennekuvaus:
+
+Ohjelmassa on käyttöliittymä, jonka Main-luokka käynnistää. Käyttöliittymä luo KeyboardGenerator-olion, joka taas luo
+Keyboard-olion. Käyttöliittymä hyödyntää Keyboard-olion tietoja, mutta KeyboardGeneratorilla ei ole toimintoja
+Keyboard-olion luonnin lisäksi.
+Käyttöliittymällä on pääsy Keyboardin tietoihin.
