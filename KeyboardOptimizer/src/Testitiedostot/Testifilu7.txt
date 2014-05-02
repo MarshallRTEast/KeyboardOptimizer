@@ -1,0 +1,5 @@
+ABCDEFGHIJKLMNOPQRSTUVWXYZ,.-_:;!"#%&/()=?`+^*'
+
+kelpuutettavia merkkejä kaikki
+
+nämä aiheuttavat ongelmia:

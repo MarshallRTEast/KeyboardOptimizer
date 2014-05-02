@@ -359,6 +359,7 @@ package userinterface;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.FlowLayout;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import javax.swing.JButton;
@@ -374,6 +375,9 @@ import logic.KeyboardGenerator;
  */
 public class UserInterface extends javax.swing.JFrame {
 
+    /**
+     * Lista komponenteista, joiden käytön tulee olla estetty
+     */
     private ArrayList<Component> listOfDisabledKeys = new ArrayList<Component>();
 
     /**
@@ -515,6 +519,7 @@ public class UserInterface extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         percentageLabel = new javax.swing.JLabel();
         percentageGradientExplanation = new javax.swing.JLabel();
+        percentageGradientExplanation2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("KeyboardOptimizer");
@@ -2843,7 +2848,7 @@ public class UserInterface extends javax.swing.JFrame {
 
         chooseFileGuide.setText("Luettavan tiedoston voi valita joko Choose File -napilla tai kirjoittamalla tiedostoreitti File path -alueeseen.");
 
-        chooseKeysetGuide.setText("Keyset -kenttään voidaan asettaa luettavat merkit, jos halutaan käyttää muita kuin suomalaisia aakkosia. Tällöin Use Custom Keyset-nappi pitää olla painettuna.");
+        chooseKeysetGuide.setText("Keyset -kenttään voidaan asettaa luettavat merkit, jos halutaan käyttää muita kuin isoja aakkosia (poislukien ääkköset). Tällöin Use Custom Keyset-nappi pitää olla painettuna.");
 
         KeyAreaScrollPane.setAutoscrolls(true);
 
@@ -2879,19 +2884,30 @@ public class UserInterface extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Hanskat\\KeyboardOptimizer\\KeyboardOptimizer\\src\\gradient.jpg")); // NOI18N
 
-        percentageLabel.setText("%    0           5              10                                                         30                                                      50                                                                                                                                                     100");
+        percentageLabel.setText("%    0             5              10                                                         30                                                      50                                                                                                                                                     100");
 
         percentageGradientExplanation.setText("Alla merkkien prosentuaalisiin määriin liittyvät värit, jakauma on epätasainen, koska pienet määrät tiettyä merkkiä ovat yleisempiä.");
+
+        percentageGradientExplanation2.setText("Jos merkkiä ei ole tiedostossa, on väri valkoinen.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(percentageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 967, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(percentageGradientExplanation, javax.swing.GroupLayout.PREFERRED_SIZE, 822, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(percentageGradientExplanation, javax.swing.GroupLayout.PREFERRED_SIZE, 899, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(percentageGradientExplanation2, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chooseKeysetGuide))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -2899,24 +2915,17 @@ public class UserInterface extends javax.swing.JFrame {
                             .addComponent(KeyAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(KeyboardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(ClearKeysButton)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 921, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                            .addComponent(jLabel2)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CreateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(SetCustomKeyset)
-                            .addComponent(FileChooserButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CreateButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(69, 69, 69))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(chooseKeysetGuide)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(percentageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 955, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jLabel1)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(FileChooserButton, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2943,17 +2952,19 @@ public class UserInterface extends javax.swing.JFrame {
                     .addComponent(KeyAreaScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ClearKeysButton)
-                .addGap(9, 9, 9)
+                .addGap(2, 2, 2)
                 .addComponent(chooseFileGuide)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(chooseKeysetGuide)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(percentageGradientExplanation)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(percentageGradientExplanation, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(percentageGradientExplanation2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(percentageLabel)
-                .addGap(1, 1, 1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -2989,9 +3000,8 @@ public class UserInterface extends javax.swing.JFrame {
                 CreateKeyButtons(keyboard);
 
             }
-        } catch (Exception e) {
-            System.out.println("Tiedostoa ei löytynyt!\n");
-            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            System.out.println("Tiedostoa ei löytynyt!");
         }
         ClearKeysButton.doClick();
     }//GEN-LAST:event_CreateButtonActionPerformed
@@ -3104,7 +3114,6 @@ public class UserInterface extends javax.swing.JFrame {
             RGB[2] = 255 - (int) Math.floor((percentageOfKeyInFile - 50) / 0.2);
         }
         Color rgb = new Color(RGB[0], RGB[1], RGB[2]);
-        System.out.println(key + ":" + keyAmount + ":" + percentageOfKeyInFile);
         return rgb;
 
     }
@@ -3536,7 +3545,6 @@ public class UserInterface extends javax.swing.JFrame {
     private void ClearKeysButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearKeysButtonActionPerformed
         for (Component comp : KeyboardPanel.getComponents()) {
             JPanel jPanel = (JPanel) comp;
-//            KeyboardPanelButtonPressed(evt, jPanel, comp);
             for (Component jPanelComp : jPanel.getComponents()) {
                 JButton jButton = (JButton) jPanelComp;
                 jButton.doClick();
@@ -3709,6 +3717,7 @@ public class UserInterface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel percentageGradientExplanation;
+    private javax.swing.JLabel percentageGradientExplanation2;
     private javax.swing.JLabel percentageLabel;
     // End of variables declaration//GEN-END:variables
 }

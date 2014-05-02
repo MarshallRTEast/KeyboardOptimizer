@@ -32,10 +32,22 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="percentageLabel" min="-2" pref="967" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="percentageGradientExplanation" min="-2" pref="822" max="-2" attributes="0"/>
+                      <Component id="percentageGradientExplanation" min="-2" pref="899" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="percentageGradientExplanation2" min="-2" pref="299" max="-2" attributes="0"/>
+                          <Component id="chooseKeysetGuide" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -44,30 +56,21 @@
                           <Component id="KeyAreaScrollPane" alignment="1" pref="0" max="32767" attributes="0"/>
                           <Component id="KeyboardPanel" alignment="1" max="32767" attributes="0"/>
                           <Component id="ClearKeysButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" pref="921" max="32767" attributes="0"/>
+                          <Component id="jLabel5" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" alignment="1" pref="161" max="32767" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" alignment="1" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane2" min="-2" pref="161" max="-2" attributes="0"/>
+                          <Component id="CreateButton" min="-2" pref="161" max="-2" attributes="0"/>
                           <Component id="SetCustomKeyset" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="FileChooserButton" max="32767" attributes="0"/>
-                          <Component id="CreateButton" max="32767" attributes="0"/>
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="FileChooserButton" min="-2" pref="161" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="chooseKeysetGuide" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
               </Group>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Component id="percentageLabel" min="-2" pref="955" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -99,17 +102,19 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="ClearKeysButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
               <Component id="chooseFileGuide" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="chooseKeysetGuide" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="percentageGradientExplanation" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="percentageGradientExplanation" min="-2" pref="14" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <Component id="percentageGradientExplanation2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="percentageLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel5" min="-2" pref="75" max="-2" attributes="0"/>
-              <EmptySpace pref="51" max="32767" attributes="0"/>
+              <EmptySpace pref="41" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -3060,7 +3065,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="chooseKeysetGuide">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Keyset -kentt&#xe4;&#xe4;n voidaan asettaa luettavat merkit, jos halutaan k&#xe4;ytt&#xe4;&#xe4; muita kuin suomalaisia aakkosia. T&#xe4;ll&#xf6;in Use Custom Keyset-nappi pit&#xe4;&#xe4; olla painettuna."/>
+        <Property name="text" type="java.lang.String" value="Keyset -kentt&#xe4;&#xe4;n voidaan asettaa luettavat merkit, jos halutaan k&#xe4;ytt&#xe4;&#xe4; muita kuin isoja aakkosia (poislukien &#xe4;&#xe4;kk&#xf6;set). T&#xe4;ll&#xf6;in Use Custom Keyset-nappi pit&#xe4;&#xe4; olla painettuna."/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="KeyAreaScrollPane">
@@ -3118,12 +3123,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="percentageLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="%    0           5              10                                                         30                                                      50                                                                                                                                                     100"/>
+        <Property name="text" type="java.lang.String" value="%    0             5              10                                                         30                                                      50                                                                                                                                                     100"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="percentageGradientExplanation">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alla merkkien prosentuaalisiin m&#xe4;&#xe4;riin liittyv&#xe4;t v&#xe4;rit, jakauma on ep&#xe4;tasainen, koska pienet m&#xe4;&#xe4;r&#xe4;t tietty&#xe4; merkki&#xe4; ovat yleisempi&#xe4;."/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="percentageGradientExplanation2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Jos merkki&#xe4; ei ole tiedostossa, on v&#xe4;ri valkoinen."/>
       </Properties>
     </Component>
   </SubComponents>

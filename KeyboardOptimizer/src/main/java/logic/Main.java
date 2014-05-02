@@ -1,7 +1,5 @@
 package logic;
 
-import java.util.HashMap;
-import javax.swing.SwingUtilities;
 import userinterface.UserInterface;
 
 public class Main {

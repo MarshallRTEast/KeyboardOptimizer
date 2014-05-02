@@ -9,35 +9,49 @@ import java.util.TreeMap;
 /**
  * Luokka saa parametrikseen tiedoston ja luo sen pohjalta Keyboard-olion, johon
  * on laskettu tiedostosta löytyvät merkkien määrät. Käytettävät merkit voi
- * valita joko itse tai käyttää suomalaisia isoja aakkosia.
+ * valita joko itse tai käyttää isoja aakkosia.
  */
 public class KeyboardGenerator {
 
+    /**
+     * Tiedosto, josta luetaan haluttuja merkkejä
+     */
     private File file;
+    /**
+     * Map-olio luotavan Keyboardiin liittyvien merkkien ja niiden määrän tallentamiseen
+     * 
+     * @see logic.Keyboard#mapOfKeys
+     */
     private Map<Character, Integer> mapOfKeys;
+    /**
+     * String-olio niistä merkeistä, jotka kuuluvat luotavaan Keyboardiin
+     * 
+     * @see logic.Keyboard#keys
+     */
     private String keys;
 
     /**
-     * Konstruktori, joka luo Keyboard-olion käyttäen suomalaisia isoja
-     * kirjaimia.
+     * Konstruktori, joka asettaa KeyboardGeneratorille valitun tiedoston ja
+     * esivalitut merkit luettavaksi
      *
-     * @param filePath
+     * @param filePath Tiedostopolku luettavalle tiedostolle
      * @throws java.io.FileNotFoundException
      */
     public KeyboardGenerator(String filePath) throws FileNotFoundException {
         this.file = new File(filePath);
         this.mapOfKeys = new TreeMap<Character, Integer>() {};
-        this.keys = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
+        this.keys = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for (int i = 0; i < keys.length(); i++) {
             mapOfKeys.put(keys.charAt(i), 0);
         }
     }
 
     /**
-     * Konstruktori, joka luo Keyboard-olion käyttäen valittuja merkkejä.
+     * Konstruktori, joka asettaa KeyboardGeneratorille valitun tiedoston ja
+     * käyttäjän valitsemat merkit luettavaksi
      *
-     * @param filePath
-     * @param keys
+     * @param filePath Tiedostopolku luettavalle tiedostolle
+     * @param keys String muuttuja, joka sisältää merkit joita luetaan tiedostosta
      * @throws java.io.FileNotFoundException
      */
     public KeyboardGenerator(String filePath, String keys) throws FileNotFoundException {
@@ -53,6 +67,8 @@ public class KeyboardGenerator {
 
     /**
      *Metodi luo Keyboard-olion, jonka jokaiseen merkkiin liittyvä määrä on 0.
+     * 
+     * @see logic.Keyboard
      * @return  Tyhjä Keyboard-olio.
      */
     public Keyboard createEmptyKeyboard() {
@@ -63,11 +79,12 @@ public class KeyboardGenerator {
     /**
      * Metodi laskee tiedostosta kirjaimet ja luo uuden Keyboard-olion käyttäen näitä merkkejä ja niihin liittyviä määriä.
      * 
+     * @see logic.Keyboard
      * @return  Uusi Keyboard-olio, johon on laskettu merkkeihin liittyvät määrät.
      * @throws java.io.FileNotFoundException 
      */
     public Keyboard countInstancesOfKeysAndCreateKeyboard() throws FileNotFoundException {
-        Scanner scanner = new Scanner(this.file);
+        Scanner scanner = new Scanner(this.file, "UTF-8");
         int amountOfKeysInFile = 0;
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();

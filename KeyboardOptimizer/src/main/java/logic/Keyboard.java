@@ -1,6 +1,5 @@
 package logic;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -10,16 +9,34 @@ import java.util.Map;
  */
 public class Keyboard {
 
+    /**
+     * Map-olio Keyboardiin liittyvien merkkien ja niiden määrän tallentamiseen
+     */
     private Map<Character, Integer> mapOfKeys;
+    /**
+     * String-olio niistä merkeistä, jotka kuuluvat Keyboardiin
+     */
     private String keys;
+    /**
+     * Matriisi, johon voidaan asettaa Keyboardin eri merkit
+     */
     private char[][] placementMatrix;
+    /**
+     * Int muuttuja joka kertoo paljonko merkkejä KeyboardGeneratorin tiedostossa oli yhteensä
+     * Käytetään vertailemaan Keyboardin merkkien määriä kokonaismäärään, jotta saadaan prosenttiosuuksia
+     * 
+     * @see logic.KeyboardGenerator
+     */
     private int amountOfKeys;
 
     /**
-     *
+     * Konstruktori joka asettaa Keyboardille merkit ja niiden määrät, kaikkien merkkien määrän sekä
+     * initialisoi matriisin tyhjäksi
+     * 
      * @param mapOfKeys Map, johon on talletettuna merkit ja niihin
      * liittyvät määrät.
      * @param keys HashMapin sisältämät merkit String-muodossa.
+     * @param amountOfKeysInFile int muuttuja, joka kertoo paljonko merkkejä tiedostossa oli yhteensä
      */
     public Keyboard(Map<Character, Integer> mapOfKeys, String keys, int amountOfKeysInFile) {
         this.mapOfKeys = mapOfKeys;
@@ -41,14 +58,9 @@ public class Keyboard {
                 this.placementMatrix[i][j] = ' ';
             }
         }
-//        for (char key : mapOfKeys.keySet()) {
-//            this.amountOfKeys += mapOfKeys.get(key);
-//        }
+
     }
 
-//    public void setAmountOfAllKeys(int amountOfKeysInFile) {
-//        this.amountOfKeys = amountOfKeysInFile;
-//    }
     
     public int getAmountOfAllKeys() {        
         return this.amountOfKeys;
@@ -56,7 +68,7 @@ public class Keyboard {
     
     /**
      * Metodilla asetetaan tiettyyn merkkiin jokin arvo olion mapOfKeys
-     * HashMapissä.
+     * HashMapissä
      *
      * @param key Merkki, jolle lisätään arvo
      * @param amount Arvo, joka merkille lisätään
@@ -79,7 +91,7 @@ public class Keyboard {
     }
 
     // palautetaan kaikki merkit ja niiden määrät muodossa:
-    // A: 2, B: 4, ... , Ä: 15, Ö: 8
+    // A: 2, B: 4, ... , Z: 5
     @Override
     public String toString() {
         String output = "";
@@ -132,23 +144,4 @@ public class Keyboard {
             }
         }
     }
-    // voidaan asettaa tietty arvo tietylle merkille pelkästään indeksin avulla
-    // lienee tarpeeton metodi, varsinkin ku muutin konstruktoreita
-//    public void setOneKeyAmountUsingIndex(int indexOfKey, int amount) {
-//        if (indexOfKey > -1 && indexOfKey < keys.length()) {
-//            this.mapOfKeys.put(keys.charAt(indexOfKey), amount);
-//        }
-//    }
-    // voidaan asettaa tietty arvo tietylle merkille
-    // ei koodin kannalta välttämättä tarpeellinen, lähinnä itselle selvennykseksi
-//    public void printPlacementMatrix() {
-//        for (int n = 0; n < placementMatrix.length; n++) {
-//            for (int m = 0; m < placementMatrix[n].length; m++) {
-//                if (!(n == 2 && m > 8)) {
-//                    System.out.print("|" + placementMatrix[n][m]);
-//                }
-//            }
-//            System.out.println("|");
-//        }
-//    }
 }
