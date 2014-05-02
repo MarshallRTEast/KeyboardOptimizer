@@ -26,6 +26,7 @@ Käyttöliittymän alareunassa on viitettä antava väriliukuma nappien eri pros
 *HUOM! Ohjelma ei tunnista kaksibittisiä merkkejä tiedostoista, joten jos luettava tiedosto sisältää yhdenkään kaksibittisen
 merkin, ei ohjelma osaa laskea merkkien prosentteja ja antaa kaikille prosentiksi 0.
 Kaksibittisiä merkkejä ovat muunmuassa ÅÖÄåöä¤`. 
+Lisäksi jostain syystä "W" esiintyy napeissa muodossa "...".
 
 *HUOM! Alue johon kirjainnapit luodaan ei tällähetkellä scrollaa oikein. Tämän takia jos yrittää lukea tiedostosta yli 60
 eri merkkiä, eivät kuudenkymmenen yli menevät merkit mahdu enää annettuun tilaan.
