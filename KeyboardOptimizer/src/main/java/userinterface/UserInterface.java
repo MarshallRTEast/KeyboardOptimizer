@@ -358,6 +358,7 @@ package userinterface;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -570,8 +571,6 @@ public class UserInterface extends javax.swing.JFrame {
 
         KeyboardPanel.setBackground(new java.awt.Color(93, 91, 90));
 
-        jPanel3.setLayout(new FlowLayout());
-        jPanel3.setToolTipText("");
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel3MouseClicked(evt);
@@ -3187,7 +3186,7 @@ public class UserInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel42MouseClicked
 
     private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
-        KeyboardPanelPressed(jPanel17);
+        KeyboardPanelPressed(jPanel7);
     }//GEN-LAST:event_jPanel7MouseClicked
 
     private void jPanel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MouseClicked
