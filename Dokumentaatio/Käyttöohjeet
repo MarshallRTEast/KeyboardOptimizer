@@ -24,7 +24,7 @@ koko näppäimistön Clear Keys -napilla.
 Käyttöliittymän alareunassa on viitettä antava väriliukuma nappien eri prosentuaalisista väreistä.
 
 *HUOM! Ohjelma ei tunnista kaksibittisiä merkkejä tiedostoista, joten jos luettava tiedosto sisältää yhdenkään kaksibittisen
-merkin, ei ohjelma osaa laskea merkkien prosentteja oikein.
+merkin, ei ohjelma osaa laskea merkkien prosentteja ja antaa kaikille prosentiksi 0.
 Kaksibittisiä merkkejä ovat muunmuassa ÅÖÄåöä¤`. 
 
 *HUOM! Alue johon kirjainnapit luodaan ei tällähetkellä scrollaa oikein. Tämän takia jos yrittää lukea tiedostosta yli 60
